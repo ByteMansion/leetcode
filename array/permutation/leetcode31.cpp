@@ -32,12 +32,12 @@ public:
                 break;
             }
         }
-        // this array is in decending order, so reverse it
+        // this array is in descending order, so reverse it
         if(pivot == 0) {
             reverse(nums.begin(), nums.end());
             return;
         }
-        // this array is not in decending order
+        // this array is not in descending order
         // find the smallest number larger than nums[pivot-1]
         size_t exInx;
         for(size_t index = cnt-1; index >= pivot; index--) {
