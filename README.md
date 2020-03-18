@@ -4,6 +4,6 @@ Another repo also includes hundreds of solutions, but it is a large projects and
 convenient to look up a certain solution. Therefore, I created this repo to split solutions 
 one by one.
 
-|No.|Leetcode Problems|Related Knowledge|
-|-|-|-|
-|1|[Leetcode 31](https://leetcode.com/problems/next-permutation/)||
+|No.|Leetcode Problems|Solutions|Related Knowledge|
+|-|-|-|-|
+|1|[Leetcode 31](https://leetcode.com/problems/next-permutation/)|[leetcode31](./array/permutation/leetcode31.cpp)||
