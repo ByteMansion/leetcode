@@ -6,4 +6,5 @@ one by one.
 
 |No.|Leetcode Problems|Solutions|Related Knowledge|
 |-|-|-|-|
-|1|[Leetcode 31](https://leetcode.com/problems/next-permutation/)|[leetcode31](./array/permutation/leetcode31.cpp)||
+|1|[Leetcode 31 nextPermutation](https://leetcode.com/problems/next-permutation/)|[leetcode 31](./array/permutation/leetcode31.cpp)||
+|2|[Leetcode 46 Permutations](https://leetcode.com/problems/permutations/)|[leetcode 46](./array/permutation/leetcode46.cpp)||
