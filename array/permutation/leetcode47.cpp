@@ -47,6 +47,7 @@ public:
     vector<vector<int>> permuteUnique(vector<int>& nums) {
         vector<vector<int>> results;
         if(nums.size() < 2) {
+            results.push_back(nums);
             return results;
         }
 
