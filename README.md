@@ -8,3 +8,5 @@ one by one.
 |-|-|-|-|
 |1|[Leetcode 31 nextPermutation](https://leetcode.com/problems/next-permutation/)|[leetcode 31](./array/permutation/leetcode31.cpp)||
 |2|[Leetcode 46 Permutations](https://leetcode.com/problems/permutations/)|[leetcode 46](./array/permutation/leetcode46.cpp)||
+|3|[Leetcode 47 Permutations II](https://leetcode.com/problems/permutations-ii/)|[leetcode 47](./array/permutation/leetcode47.cpp)||
+
