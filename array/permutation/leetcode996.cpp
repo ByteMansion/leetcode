@@ -11,13 +11,18 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <unordered_map>
 #include "../../include/utils.hpp"
 
 using namespace std;
 
 class Solution {
 private:
-    bool isSquare(const int value) {
+    bool isSquare(const int value,
+                  unordered_map<int, bool>& squareMap) {
+        if(squareMap.find(value) != squareMap.end()) {
+            return squareMap[value];
+        }
         int left = 0;
         int right = value;
         while(left+1 < right) {
@@ -27,22 +32,26 @@ private:
             } else if(mid * mid < value) {
                 left = mid;
             } else {
+                squareMap[value] = true;
                 return true;
             }
         }
         if(left * left == value) {
+            squareMap[value] = true;
             return true;
         }
         if(right * right == value) {
+            squareMap[value] = true;
             return true;
         }
 
+        squareMap[value] = false;
         return false;
     }
-    bool isSquareful(vector<int>& nums) {
+    bool isSquareful(vector<int>& nums, unordered_map<int, bool>& squareMap) {
         for(size_t index = 0; index < nums.size() - 1; index++) {
             int sum = nums[index] + nums[index+1];
-            if(!isSquare(sum)) {
+            if(!isSquare(sum, squareMap)) {
                 return false;
             }
         }
@@ -50,7 +59,8 @@ private:
     }
 
     size_t nextPermutation(vector<int>& nums,
-                           int& result) {
+                           int& result,
+                           unordered_map<int, bool>& squareMap) {
         size_t pivot = nums.size() - 1;
         while(pivot > 0) {
             if(nums[pivot] <= nums[pivot-1]) {
@@ -72,18 +82,20 @@ private:
         }
         swap(nums[eIdx], nums[pivot-1]);
         sort(nums.begin()+pivot, nums.end());
-        if(isSquareful(nums)) {
+        if(isSquareful(nums, squareMap)) {
             result++;
         }
         return pivot;
     }
 public:
+    // time limit exceeded for some cases
     int numSquarefulPerms(vector<int>& A) {
         if(A.empty()) {
             return 0;
         }
+        unordered_map<int, bool> squareMap;
         if(A.size() == 1) {
-            if(isSquareful(A)) {
+            if(isSquareful(A, squareMap)) {
                 return 1;
             } else {
                 return 0;
@@ -91,12 +103,12 @@ public:
         }
         int result = 0;
         sort(A.begin(), A.end());
-        if(isSquareful(A)) {
+        if(isSquareful(A, squareMap)) {
             result++;
         }
         size_t pivot = A.size() - 1;
         while(pivot > 0) {
-            pivot = nextPermutation(A, result);
+            pivot = nextPermutation(A, result, squareMap);
         }
 
         return result;
@@ -125,5 +137,12 @@ int main()
     result = object.numSquarefulPerms(nums);
     cout << result << endl;
 
-   return 0;
+    // 1st solution could get correct result, but time limit exceeded
+    // for this test case.
+    nums = {89, 72, 71, 44, 50, 72, 26, 79, 33, 27, 84};
+    print_array(nums);
+    result = object.numSquarefulPerms(nums);
+    cout << result << endl;
+
+    return 0;
 }
