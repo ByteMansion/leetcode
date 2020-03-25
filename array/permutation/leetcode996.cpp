@@ -128,11 +128,13 @@ private:
     }
 
 public:
-    // this solution is simple and a brute-force method, but time limit exceeded.
-    // 1st optimization: increase space complexity to save squareful results
+    // 1st solution is simple and a brute-force method, but time limit exceeded.
+    // optimization 1: increase space complexity to save squareful results
     //                   to avoid duplicate calculation;
-    // 2nd optimization: same as the 1st solution, but use math lib to
+    // optimization 2: same as the 1st solution, but use math lib to
     //                   check if squareful 
+    // time complexity: O(n * n!), n is the length of array
+    // space complexity: O(n), n is the length of array
     int numSquarefulPerms(vector<int>& A) {
         unordered_map<int, bool> squareMap; // 1st optimization
         if(A.size() == 1) {
@@ -156,7 +158,9 @@ public:
         return result;
     }
 
-    // this solution use DFS to get all results 
+    // 2nd solution uses DFS to get all results 
+    // time complexity: O(n!), n is the length of array
+    // space complexity: O(n), n is the length of array
     int numSquarefulPerms2(vector<int>& A) {
         sort(A.begin(), A.end());
 
@@ -168,6 +172,66 @@ public:
         return result;
     }
 
+    // 3rd solution use DP to log mediate result
+    // time complexity: O(n^2 * 2^n)
+    // space complexity: O(2^n)
+    // dp[s][i] := # of ways to reach state s (binary mask of nodes visited) that ends with node i
+    // dp[s | (1 << j)][j] += dp[s][i] if g[i][j]
+    int numSquarefulPerms3(vector<int>& A) {
+        sort(A.begin(), A.end());
+
+        const size_t n = A.size();
+        // square[i][j] == 1 if A[i] + A[j] is Squareful
+        vector<vector<int>> square(n, vector<int>(n, 0));
+        // dp[i][j] := # of ways to reach state i with ending node j
+        vector<vector<int>> dp(1 << n, vector<int>(n, 0));
+
+        // init array square[i][j]
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                if(i == j) continue;
+                if(isSquareful(A[i], A[j])) {
+                    square[i][j] = 1;
+                }
+            }
+        }
+
+        // only the first counts for duplicate elements
+        for(int i = 0; i <  n; i++) {
+            if(i == 0 || A[i] != A[i - 1]) {
+                dp[1 << i][i] = 1;
+            }
+        }
+
+        for(int s = 0; s < (1 << n); s++) {
+            for(int i = 0; i < n; i++) {
+                if(!dp[s][i]) {
+                    continue;
+                }
+                for(int j = 0; j < n; j++) {
+                    // not squareful
+                    if(!square[i][j]) {
+                        continue;
+                    }
+                    // have been masked in position (1 << j)
+                    if(s & (1 << j)) {
+                        continue;
+                    }
+                    // only the first element will be used as destination for duplicates
+                    if(j > 0 && !(s & (1 << (j-1))) && A[j - 1] == A[j]) {
+                        continue;
+                    }
+                    dp[s|(1 << j)][j] += dp[s][i];
+                }
+            }
+        }
+
+        int result = 0;
+        for(int i = 0; i < n; i++) {
+            result += dp[(1 << n) - 1][i];
+        }
+        return result;
+    }
 };
 
 int main()
@@ -178,24 +242,24 @@ int main()
 
     nums = {1, 17, 8};
     print_array(nums);
-    result = object.numSquarefulPerms2(nums);
+    result = object.numSquarefulPerms3(nums);
     cout << result << endl;
 
     nums = {1, 1, 1};
     print_array(nums);
-    result = object.numSquarefulPerms2(nums);
+    result = object.numSquarefulPerms3(nums);
     cout << result << endl;
 
     nums = {2, 2, 2};
     print_array(nums);
-    result = object.numSquarefulPerms2(nums);
+    result = object.numSquarefulPerms3(nums);
     cout << result << endl;
 
     // 1st solution could get correct result, but time limit exceeded
     // for this test case.
     nums = {89, 72, 71, 44, 50, 72, 26, 79, 33, 27, 84};
     print_array(nums);
-    result = object.numSquarefulPerms2(nums);
+    result = object.numSquarefulPerms3(nums);
     cout << result << endl;
 
     return 0;
