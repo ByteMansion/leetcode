@@ -12,6 +12,7 @@
 #include <vector>
 #include <algorithm>
 #include <unordered_map>
+#include <cmath>
 #include "../../include/utils.hpp"
 
 using namespace std;
@@ -23,6 +24,7 @@ private:
         if(squareMap.find(value) != squareMap.end()) {
             return squareMap[value];
         }
+#if 0
         int left = 0;
         int right = value;
         while(left+1 < right) {
@@ -44,9 +46,14 @@ private:
             squareMap[value] = true;
             return true;
         }
-
-        squareMap[value] = false;
-        return false;
+#endif
+        int square = (int)(sqrt(value) + 0.5);
+        if(square * square == value) {
+            squareMap[value] = true;
+        } else {
+            squareMap[value] = false;
+        }
+        return squareMap[value];
     }
     bool isSquareful(vector<int>& nums, unordered_map<int, bool>& squareMap) {
         for(size_t index = 0; index < nums.size() - 1; index++) {
@@ -88,12 +95,16 @@ private:
         return pivot;
     }
 public:
-    // time limit exceeded for some cases
+    // this solution is simple and a brute-force method, but time limit exceeded.
+    // 1st optimization: increase space complexity to save squareful results
+    //                   to avoid duplicate calculation;
+    // 2nd optimization: same as the 1st solution, but use math lib to
+    //                   check if squareful 
     int numSquarefulPerms(vector<int>& A) {
         if(A.empty()) {
             return 0;
         }
-        unordered_map<int, bool> squareMap;
+        unordered_map<int, bool> squareMap; // 1st optimization
         if(A.size() == 1) {
             if(isSquareful(A, squareMap)) {
                 return 1;
@@ -106,6 +117,7 @@ public:
         if(isSquareful(A, squareMap)) {
             result++;
         }
+
         size_t pivot = A.size() - 1;
         while(pivot > 0) {
             pivot = nextPermutation(A, result, squareMap);
