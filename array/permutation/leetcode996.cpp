@@ -1,5 +1,5 @@
 /**
- * @brief   Number of Squareful Arrays
+ * @brief   Leetcode 996 Number of Squareful Arrays
  *
  * Given an array A of non-negative integers, the array is squareful 
  * if for every pair of adjacent elements, their sum is a perfect square.
@@ -133,7 +133,7 @@ public:
     //                   to avoid duplicate calculation;
     // optimization 2: same as the 1st solution, but use math lib to
     //                   check if squareful 
-    // time complexity: O(n * n!), n is the length of array
+    // time complexity: O(n * logn * n!), n is the length of array
     // space complexity: O(n), n is the length of array
     int numSquarefulPerms(vector<int>& A) {
         unordered_map<int, bool> squareMap; // 1st optimization

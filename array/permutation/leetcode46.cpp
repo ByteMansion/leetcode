@@ -1,5 +1,6 @@
 /**
- * @brief   Permutations
+ * @brief   Leetcode 46 Permutations
+ *
  * Given a collection of distinct integers, return all possible permutations.
  *
  */
@@ -43,6 +44,24 @@ private:
         return pivot;
     }
 
+    void dfsHelper(vector<int>& nums, vector<int>& used, vector<int>& perm,
+                   vector<vector<int>>& results) {
+        if(perm.size() == nums.size()) {
+            results.push_back(perm);
+            return;
+        }
+
+        for(size_t index = 0; index < nums.size(); index++) {
+            if(used[index] == 1) {
+                continue;
+            }
+            used[index] = 1;
+            perm.push_back(nums[index]);
+            dfsHelper(nums, used, perm, results);
+            used[index] = 0;
+            perm.pop_back();
+        }
+    }
 public:
     vector<vector<int>> permute(vector<int>& nums) {
         vector<vector<int>> results(0, vector<int>{});
@@ -62,6 +81,22 @@ public:
         return results;
     }
 
+    vector<vector<int>> permute2(vector<int>& nums) {
+        vector<vector<int>> results(0, vector<int>{});
+        if(nums.empty()) {
+            return results;
+        }
+
+        // sort array numbers
+        sort(nums.begin(), nums.end());
+
+        vector<int> used(nums.size(), 0);
+        vector<int> perm;
+        dfsHelper(nums, used, perm, results);
+
+        return results;
+    }
+
 };
 
 int main()
@@ -73,7 +108,7 @@ int main()
     // case 1
     nums = {1,2,3};
     print_array(nums);
-    results = object.permute(nums);
+    results = object.permute2(nums);
     for(size_t index = 0; index < results.size(); index++) {
         print_array(results[index]);
     }
@@ -81,11 +116,18 @@ int main()
     // case 2
     nums = {1};
     print_array(nums);
-    results = object.permute(nums);
+    results = object.permute2(nums);
     for(size_t index = 0; index < results.size(); index++) {
         print_array(results[index]);
     }
 
+    // case 3
+    nums = {4, 2, 6, 9};
+    print_array(nums);
+    results = object.permute2(nums);
+    for(size_t index = 0; index < results.size(); index++) {
+        print_array(results[index]);
+    }
 
     return 0;
 }
