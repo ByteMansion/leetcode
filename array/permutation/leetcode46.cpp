@@ -63,6 +63,12 @@ private:
         }
     }
 public:
+    /**
+     * @brief   1st solution
+     *
+     * time complexity: O(n!*n)
+     * space complexity: O(1)
+     */
     vector<vector<int>> permute(vector<int>& nums) {
         vector<vector<int>> results(0, vector<int>{});
         if(nums.empty()) {
@@ -81,6 +87,12 @@ public:
         return results;
     }
 
+    /**
+     * @brief   2nd solution: backtracking method - DFS
+     *
+     * time complexity: O(n!)
+     * space complexity: O(n)
+     */
     vector<vector<int>> permute2(vector<int>& nums) {
         vector<vector<int>> results(0, vector<int>{});
         if(nums.empty()) {

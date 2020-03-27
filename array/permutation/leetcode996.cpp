@@ -128,13 +128,15 @@ private:
     }
 
 public:
-    // 1st solution is simple and a brute-force method, but time limit exceeded.
-    // optimization 1: increase space complexity to save squareful results
-    //                   to avoid duplicate calculation;
-    // optimization 2: same as the 1st solution, but use math lib to
-    //                   check if squareful 
-    // time complexity: O(n * logn * n!), n is the length of array
-    // space complexity: O(n), n is the length of array
+    /**
+     * @brief   1st solution is a simple and brute-force method, but time limit exceeded.
+     * optimization 1: increase space complexity to save squareful results
+     *                 to avoid duplicate calculation;
+     * optimization 2: same as the 1st solution, but use math lib to
+     *                 check if squareful 
+     * time complexity: O(n * logn * n!), n is the length of array
+     * space complexity: O(n), n is the length of array
+     */
     int numSquarefulPerms(vector<int>& A) {
         unordered_map<int, bool> squareMap; // 1st optimization
         if(A.size() == 1) {
@@ -158,9 +160,12 @@ public:
         return result;
     }
 
-    // 2nd solution uses DFS to get all results 
-    // time complexity: O(n!), n is the length of array
-    // space complexity: O(n), n is the length of array
+    /**
+     * @brief   2nd solution uses DFS to get all results
+     *
+     * time complexity: O(n!), n is the length of array
+     * space complexity: O(n), n is the length of array
+     */
     int numSquarefulPerms2(vector<int>& A) {
         sort(A.begin(), A.end());
 
@@ -172,11 +177,14 @@ public:
         return result;
     }
 
-    // 3rd solution use DP to log mediate result
-    // time complexity: O(n^2 * 2^n)
-    // space complexity: O(2^n)
-    // dp[s][i] := # of ways to reach state s (binary mask of nodes visited) that ends with node i
-    // dp[s | (1 << j)][j] += dp[s][i] if g[i][j]
+    /**
+     * @brief   3rd solution use DP to log mediate result
+     *
+     * time complexity: O(n^2 * 2^n)
+     * space complexity: O(2^n)
+     * dp[s][i] := # of ways to reach state s (binary mask of nodes visited) that ends with node i
+     * dp[s | (1 << j)][j] += dp[s][i] if g[i][j]
+     */
     int numSquarefulPerms3(vector<int>& A) {
         sort(A.begin(), A.end());
 
