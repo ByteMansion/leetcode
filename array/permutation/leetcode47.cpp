@@ -107,6 +107,7 @@ public:
             return results;
         }
 
+        sort(nums.begin(), nums.end());
         vector<int> used(nums.size(), 0);
         vector<int> perm;
         dfsHelper(nums, used, perm, results);
@@ -121,6 +122,14 @@ int main()
     Solution object;
     vector<int> nums;
     vector<vector<int>> results;
+
+    nums = {3, 3, 0, 3};
+    print_array(nums);
+    results = object.permuteUnique2(nums);
+    cout << results.size() << endl;
+    for(auto tmp: results) {
+        print_array(tmp);
+    }
 
     nums = {1, 1, 1, 1, 1, 1};
     print_array(nums);
