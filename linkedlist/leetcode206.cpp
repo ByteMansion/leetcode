@@ -13,6 +13,9 @@ using namespace std;
 
 class Solution {
 public:
+    /**
+     * 1st solution: recursive method
+     */
     // e.g. head->2->3->4
     ListNode* reverseList(ListNode* head) {
         // basic case
@@ -31,6 +34,27 @@ public:
 
         return newNode;
     }
+
+    /**
+     * 2nd method: iterative method
+     */
+    ListNode* reverseList2(ListNode* head) {
+        if(head == NULL || head->next == NULL) {
+            return head;
+        }
+
+        ListNode* pos = NULL;
+        ListNode* pre = NULL;
+        while(head->next != NULL) {
+            pos = head->next;
+            head->next = pre;
+            pre = head;
+            head = pos;
+        }
+        head->next = pre;
+
+        return head;
+    }
 };
 
 int main()
@@ -45,7 +69,7 @@ int main()
 
     Solution object;
     print_linkedlist(head);
-    head = object.reverseList(head);
+    head = object.reverseList2(head);
     print_linkedlist(head);
 
     delete head; delete node2; delete node3; delete node4;
