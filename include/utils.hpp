@@ -6,6 +6,28 @@
 #include <cstdlib>
 
 using namespace std;
+/**
+* Definition for singly-linked list.
+*/
+struct ListNode {
+    int val;
+    ListNode *next;
+
+    ListNode(int x) : val(x), next(NULL) {}
+ };
+
+void print_linkedlist(ListNode* head)
+{
+    if(head == NULL) {
+        cout << "Empty Linked List!" << endl;
+    }
+    ListNode* node = head;
+    while(node != NULL) {
+        cout << node->val << " ";
+        node = node->next;
+    }
+    cout << endl;
+}
 
 void print_array(const vector<int> &array)
 {
@@ -20,3 +42,4 @@ void print_array(const vector<int> &array)
     }
     cout << endl;
 }
+
