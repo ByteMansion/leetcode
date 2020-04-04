@@ -77,5 +77,8 @@ int main()
     head = object.reverseBetween(head, 3, 3);
     print_linkedlist(head);
 
+    delete head; delete node1; delete node2;
+    delete node3; delete node4;
+
     return 0;
 }
