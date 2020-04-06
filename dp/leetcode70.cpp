@@ -13,6 +13,11 @@ using namespace std;
 
 class Solution {
 public:
+    /**
+     * 1st solution: dynamic programming
+     *
+     * space complexity: O(n)
+     */
     int climbStairs(int n) {
         if(n <= 2) {
             return n;
@@ -20,7 +25,7 @@ public:
         // dp[i]: # of ways when reaching i steps
         vector<int> dp(n+1, 0);
 
-        // base case
+        // base cases
         dp[1] = 1;
         dp[2] = 2;
 
@@ -31,6 +36,30 @@ public:
 
         return dp[n];
     }
+    /**
+     * 2nd solution: dynamic programming
+     *
+     * this is a optimized one compared with 1st solution.
+     * space complexity: O(1)
+     */
+    int climbStairs2(int n) {
+        if(n <= 2) {
+            return n;
+        }
+        // base cases
+        int first = 1;
+        int second = 2;
+        int current = 0;
+
+        // get final result
+        for(int i = 3; i < n+1; i++) {
+            current = first + second;
+            first = second;
+            second = current;
+        }
+
+        return current;
+    }
 };
 
 int main()
@@ -40,15 +69,15 @@ int main()
 
     // case 1
     num = 2;
-    cout << object.climbStairs(num) << endl;
+    cout << object.climbStairs2(num) << endl;
 
     // case 2
     num = 5;
-    cout << object.climbStairs(num) << endl;
+    cout << object.climbStairs2(num) << endl;
 
     // case 3
     num = 10;
-    cout << object.climbStairs(num) << endl;
+    cout << object.climbStairs2(num) << endl;
 
     return 0;
 }
