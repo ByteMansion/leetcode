@@ -78,7 +78,7 @@ public:
     /**
      * @brief   3nd solution: dynamic programming
      *
-     * this is top-down with memoization method.
+     * this is bottom-up method.
      * space complexity: O(n)
      * time complexity:O(n)
      */
