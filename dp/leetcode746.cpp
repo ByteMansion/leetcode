@@ -22,6 +22,7 @@ public:
     /**
      * @brief    1st solution: dynamic programming
      *
+     * this is bottom-up method.
      * space complexity: O(n)
      * time complexity: O(n)
      */
@@ -49,6 +50,8 @@ public:
     }
     /**
      * @brief   2nd solution: dynamic programming
+     *
+     * this is bottom-up method.
      * 1st solution can be optimized in time complexity.
      * space complexity: O(1)
      * time complexity: O(n)
@@ -71,6 +74,35 @@ public:
 
         return cur;
     }
+
+    /**
+     * @brief   3nd solution: dynamic programming
+     *
+     * this is top-down with memoization method.
+     * space complexity: O(n)
+     * time complexity:O(n)
+     */
+    int minCostClimbingStairs3(vector<int>& cost) {
+        if(cost.size() < 2) {
+            return 0;
+        }
+
+        size_t n = cost.size();
+
+        // dp[i]: the final cost of climbing to the top from step i 
+        vector<int> dp(n+1, 0);
+
+        // base
+        dp[n] = 0;
+        dp[n-1] = cost[n-1];
+
+        // dp[i] = cost[i] + min(dp[i+1], dp[i+2])
+        for(int i = n-2; i >= 0; i--) {
+            dp[i] = cost[i] + min(dp[i+1], dp[i+2]);
+        }
+
+        return min(dp[0], dp[1]);
+    }
 };
 
 int main()
@@ -81,12 +113,12 @@ int main()
 
     // case 1
     cost = {10, 15, 20};
-    result = object.minCostClimbingStairs2(cost);
+    result = object.minCostClimbingStairs3(cost);
     cout << result << endl;
 
     // case 2
     cost = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
-    result = object.minCostClimbingStairs2(cost);
+    result = object.minCostClimbingStairs3(cost);
     cout << result << endl;
 
     return 0;
