@@ -22,7 +22,6 @@ public:
         }
 
         size_t n = cost.size();
-        cost.push_back(0);
         // dp[i]: the min cost when climbing i-th stirs
         vector<int> dp(n+1, 0);
 
