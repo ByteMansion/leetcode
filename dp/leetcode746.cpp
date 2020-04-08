@@ -6,6 +6,9 @@
  * cost to reach the top of the floor, and you can either start from the step with index 0,
  * or the step with index 1.
  *
+ * Note:
+ * 1. cost will have a length in the range [2, 1000].
+ * 2. Every cost[i] will be an integer in the range [0, 999].
  */
 
 #include "../include/utils.hpp"
@@ -16,7 +19,15 @@ using namespace std;
 
 class Solution {
 public:
+    /**
+     * @brief    1st solution: dynamic programming
+     *
+     * space complexity: O(n)
+     * time complexity: O(n)
+     */
     int minCostClimbingStairs(vector<int>& cost) {
+        // the length of cost is greater than 2, following statements
+        // is unnecessary.
         if(cost.size() < 2) {
             return 0;
         }
@@ -36,6 +47,30 @@ public:
 
         return dp[n];
     }
+    /**
+     * @brief   2nd solution: dynamic programming
+     * 1st solution can be optimized in time complexity.
+     * space complexity: O(1)
+     * time complexity: O(n)
+     */
+    int minCostClimbingStairs2(vector<int>& cost) {
+        if(cost.size() < 2) {
+            return 0;
+        }
+
+        size_t n = cost.size();
+        int pre = 0;
+        int prepre = 0;
+        int cur = 0;
+
+        for(int i = 2; i <= n; i++) {
+            cur = min(pre + cost[i-1], prepre + cost[i-2]);
+            prepre = pre;
+            pre = cur;
+        }
+
+        return cur;
+    }
 };
 
 int main()
@@ -46,12 +81,12 @@ int main()
 
     // case 1
     cost = {10, 15, 20};
-    result = object.minCostClimbingStairs(cost);
+    result = object.minCostClimbingStairs2(cost);
     cout << result << endl;
 
     // case 2
     cost = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
-    result = object.minCostClimbingStairs(cost);
+    result = object.minCostClimbingStairs2(cost);
     cout << result << endl;
 
     return 0;
