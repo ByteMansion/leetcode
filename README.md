@@ -12,5 +12,6 @@ one by one.
 |70|[Leetcode 70 Climbing Stirs](https://leetcode.com/problems/climbing-stairs/)|[solution](./dp/leetcode70.cpp)|dynamic programming|
 |92|[Leetcode 92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[solution](./linkedlist/leetcode92.cpp)||
 |206|[Leetcode 206 Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[solution](./linkedlist/leetcode206.cpp)||
+|392|[Leetcode 392 Is Subsequence](https://leetcode.com/problems/is-subsequence/)|[solution](./dp/leetcode392.cpp)||
 |746|[Leetcode 746 Min Cost Climbing Stirs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[solution](./dp/leetcode746.cpp)|dynamic programming|
 |996|[Leetcode 996 Number of Squareful Arrays](https://leetcode.com/problems/number-of-squareful-arrays/)|[solution](./array/permutation/leetcode996.cpp)||

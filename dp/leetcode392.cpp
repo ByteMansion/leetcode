@@ -25,7 +25,10 @@ using namespace std;
 class Solution {
 public:
     bool isSubsequence(string s, string t) {
-        if(t.empty() || s.length() > t.length()) {
+        if(s.empty() && t.empty()) {
+            return true;
+        }
+        if(s.length() > t.length()) {
             return false;
         }
 
@@ -62,6 +65,11 @@ int main()
     // case 3
     s = "abcd";
     t = "abcd";
+    cout << object.isSubsequence(s, t) << endl;
+
+    // case 4
+    s = "";
+    t = "";
     cout << object.isSubsequence(s, t) << endl;
 
     return 0;
