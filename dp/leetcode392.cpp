@@ -74,8 +74,8 @@ public:
             size_t i;
             for(i = 0; i < pos.size(); i++) {
                 if(pos[i] > pre) {
-                    pre = cur;
                     cur = pos[i];
+                    pre = cur;
                     break;
                 }
             }
