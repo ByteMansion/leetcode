@@ -24,6 +24,9 @@ using namespace std;
 
 class Solution {
 public:
+    /**
+     * 1st solution: brute force
+     */
     bool isSubsequence(string s, string t) {
         if(s.empty() && t.empty()) {
             return true;
@@ -44,6 +47,45 @@ public:
 
         return true;
     }
+    /**
+     * 2nd solution: create letter look-up table
+     */
+    bool isSubsequence2(string s, string t) {
+        if(s.empty() && t.empty()) {
+            return true;
+        }
+        if(s.length() > t.length()) {
+            return false;
+        }
+
+        // create a table for positions of lower case letters
+        vector<vector<int>> tbl(26, vector<int>{});
+        for(size_t idx = 0; idx < t.length(); idx++) {
+            tbl[t[idx]-'a'].push_back(idx);
+        }
+
+        int pre = -1;
+        int cur = 0;
+        for(size_t sIdx = 0; sIdx < s.length(); sIdx++) {
+            vector<int> pos = tbl[s[sIdx]-'a'];
+            if(pos.empty()) {
+                return false;
+            }
+            size_t i;
+            for(i = 0; i < pos.size(); i++) {
+                if(pos[i] > pre) {
+                    pre = cur;
+                    cur = pos[i];
+                    break;
+                }
+            }
+            if(i == pos.size()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 };
 
 int main()
@@ -55,22 +97,22 @@ int main()
     // case 1
     s = "abc";
     t = "ahbgtc";
-    cout << object.isSubsequence(s, t) << endl;
+    cout << object.isSubsequence2(s, t) << endl;
 
     // case 2
     s = "axc";
     t = "ahbgtc";
-    cout << object.isSubsequence(s, t) << endl;
+    cout << object.isSubsequence2(s, t) << endl;
 
     // case 3
     s = "abcd";
     t = "abcd";
-    cout << object.isSubsequence(s, t) << endl;
+    cout << object.isSubsequence2(s, t) << endl;
 
     // case 4
     s = "";
     t = "";
-    cout << object.isSubsequence(s, t) << endl;
+    cout << object.isSubsequence2(s, t) << endl;
 
     return 0;
 }

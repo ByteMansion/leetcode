@@ -20,7 +20,7 @@ using namespace std;
 class Solution {
 public:
     /**
-     * @brief    1st solution: dynamic programming
+     * 1st solution: dynamic programming
      *
      * this is bottom-up method.
      * space complexity: O(n)
@@ -49,7 +49,7 @@ public:
         return dp[n];
     }
     /**
-     * @brief   2nd solution: dynamic programming
+     * 2nd solution: dynamic programming
      *
      * this is bottom-up method.
      * 1st solution can be optimized in time complexity.
@@ -76,7 +76,7 @@ public:
     }
 
     /**
-     * @brief   3nd solution: dynamic programming
+     * 3nd solution: dynamic programming
      *
      * this is bottom-up method.
      * space complexity: O(n)
