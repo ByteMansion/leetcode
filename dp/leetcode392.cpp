@@ -89,12 +89,15 @@ public:
         }
         return true;
     }
-#if 0
+//#if 0
 private:
     int find_smallest_index_in_string(const int idx,
                                       vector<int>& tbl,
                                       const int pos)
     {
+        if(tbl.empty()) {
+            return -1;
+        }
         int left = 0;
         int right = tbl.size() - 1;
         while(left < right) {
@@ -105,8 +108,8 @@ private:
                 left = mid;
             }
         }
-        if(tbl[left] > pos) return left;
-        if(tbl[right] > pos) return right;
+        if(tbl[left] > pos) return tbl[left];
+        if(tbl[right] > pos) return tbl[right];
 
         return -1;
     }
@@ -120,7 +123,7 @@ public:
      * a string s letter.
      *
      */
-    bool isSubsequence(string s, string t)
+    bool isSubsequence3(string s, string t)
     {
         if(s.empty() && t.empty()) {
             return true;
@@ -132,13 +135,13 @@ public:
         int sLen = s.length();
         int tLen = t.length();
         vector<vector<int>> cTbl(26, vector<int>{});
-        for(size_t tIdx = 0; tIdx < tLen; tidx++) {
+        for(size_t tIdx = 0; tIdx < tLen; tIdx++) {
             cTbl[t[tIdx]-'a'].push_back(tIdx);
         }
 
         int pre = -1;
         for(size_t sIdx = 0; sIdx < sLen; sIdx++) {
-            int pos = find_smallest_index_in_string(s[sIdx], cTbl[s[sIdx]], pre);
+            int pos = find_smallest_index_in_string(sIdx, cTbl[s[sIdx]-'a'], pre);
             if(pos == -1) {
                 return false;
             }
@@ -147,7 +150,7 @@ public:
 
         return true;
     }
-#endif
+//#endif
 
 };
 
@@ -160,22 +163,22 @@ int main()
     // case 1
     s = "abc";
     t = "ahbgtc";
-    cout << object.isSubsequence2(s, t) << endl;
+    cout << object.isSubsequence3(s, t) << endl;
 
     // case 2
     s = "axc";
     t = "ahbgtc";
-    cout << object.isSubsequence2(s, t) << endl;
+    cout << object.isSubsequence3(s, t) << endl;
 
     // case 3
     s = "abcd";
     t = "abcd";
-    cout << object.isSubsequence2(s, t) << endl;
+    cout << object.isSubsequence3(s, t) << endl;
 
     // case 4
     s = "";
     t = "";
-    cout << object.isSubsequence2(s, t) << endl;
+    cout << object.isSubsequence3(s, t) << endl;
 
     return 0;
 }
