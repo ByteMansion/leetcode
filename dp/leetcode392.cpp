@@ -26,6 +26,10 @@ class Solution {
 public:
     /**
      * 1st solution: brute force
+     *
+     * time complexity: O(n), n is the length of string t
+     * space complexity: O(1)
+     *
      */
     bool isSubsequence(string s, string t) {
         if(s.empty() && t.empty()) {
@@ -40,12 +44,12 @@ public:
             if(sIdx < s.length() && s[sIdx] == t[i]) {
                 sIdx++;
             }
-        }
-        if(sIdx < s.length()) {
-            return false;
+            if(sIdx == s.length()) {
+                return true;
+            }
         }
 
-        return true;
+        return false;
     }
     /**
      * 2nd solution: create letter look-up table
@@ -60,8 +64,8 @@ public:
 
         // create a table for positions of lower case letters
         vector<vector<int>> tbl(26, vector<int>{});
-        for(size_t idx = 0; idx < t.length(); idx++) {
-            tbl[t[idx]-'a'].push_back(idx);
+        for(size_t tIdx = 0; tIdx < t.length(); tIdx++) {
+            tbl[t[tIdx]-'a'].push_back(tIdx);
         }
 
         int pre = -1;
@@ -85,6 +89,65 @@ public:
         }
         return true;
     }
+#if 0
+private:
+    int find_smallest_index_in_string(const int idx,
+                                      vector<int>& tbl,
+                                      const int pos)
+    {
+        int left = 0;
+        int right = tbl.size() - 1;
+        while(left < right) {
+            int mid = left + (right - left) / 2;
+            if(tbl[mid] > pos) {
+                right = mid;
+            } else {
+                left = mid;
+            }
+        }
+        if(tbl[left] > pos) return left;
+        if(tbl[right] > pos) return right;
+
+        return -1;
+    }
+
+public:
+    /**
+     * solution to Follow-up: Dynamic Programming
+     *
+     * this solution is similar to 2nd solution, but we use
+     * a better search method, binary search, to find the smallest position of
+     * a string s letter.
+     *
+     */
+    bool isSubsequence(string s, string t)
+    {
+        if(s.empty() && t.empty()) {
+            return true;
+        }
+        if(s.length() > t.length()) {
+            return false;
+        }
+
+        int sLen = s.length();
+        int tLen = t.length();
+        vector<vector<int>> cTbl(26, vector<int>{});
+        for(size_t tIdx = 0; tIdx < tLen; tidx++) {
+            cTbl[t[tIdx]-'a'].push_back(tIdx);
+        }
+
+        int pre = -1;
+        for(size_t sIdx = 0; sIdx < sLen; sIdx++) {
+            int pos = find_smallest_index_in_string(s[sIdx], cTbl[s[sIdx]], pre);
+            if(pos == -1) {
+                return false;
+            }
+            pre = pos;
+        }
+
+        return true;
+    }
+#endif
 
 };
 
