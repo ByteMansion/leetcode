@@ -40,6 +40,25 @@ public:
         return result;
     }
 
+    /**
+     * 2nd solution: create lookup table
+     *
+     */
+    int numMatchingSubseq2(string S, vector<string>& words) {
+        // create lookup table
+        vector<vector<int>> tbl(26, vector<int>{});
+        for(size_t sIdx = 0; sIdx < S.length(); sIdx++) {
+            tbl[S[sIdx]-'a'].push_back(sIdx);
+        }
+        int count = 0;
+        for(size_t idx = 0; idx < words.size(); idx++) {
+            if(isMatching(tbl, words[idx])) {
+                count++;
+            }
+        }
+        return count;
+    }
+
 private:
     bool isSubsequence(string s, string t) {
         size_t sIdx = 0;
@@ -58,6 +77,37 @@ private:
 
         return false;
     }
+
+    int find_smallest_pos(vector<int>& list, int pos) {
+        int left = 0;
+        int right = list.size()-1;
+        while(left + 1 < right) {
+            int mid = left + (right - left) / 2;
+            if(list[mid] > pos) {
+                right = mid;
+            } else {
+                left = mid;
+            }
+        }
+        if(list[left] > pos) return list[left];
+        if(list[right] > pos) return list[right];
+        return -1;
+    }
+
+    bool isMatching(vector<vector<int>>& tbl, string cmp) {
+        int pre = -1;
+        for(size_t idx = 0; idx < cmp.length(); idx++) {
+            if(tbl[cmp[idx]-'a'].empty()) {
+                return false;
+            }
+            int pos = find_smallest_pos(tbl[cmp[idx]-'a'], pre);
+            if(pos == -1) {
+                return false;
+            }
+            pre = pos;
+        }
+        return true;
+    }
 };
 
 int main()
@@ -69,12 +119,17 @@ int main()
     // case 1
     S = "abcde";
     words = {"a", "bb", "acd", "ace"};
-    cout << obj.numMatchingSubseq(S, words) << endl;
+    cout << obj.numMatchingSubseq2(S, words) << endl;
 
     // case 2
     S = "adfadfrfdgsdgdfghdfdjhdfdtfbfgdrwesdhgjsjkukisqqq";
     words = {"saefs", "thfger", "wdsfaw", "dffd"};
-    cout << obj.numMatchingSubseq(S, words) << endl;
+    cout << obj.numMatchingSubseq2(S, words) << endl;
+
+    // case 3
+    S = "dsahjpjauf";
+    words = {"ahjpjau", "ja", "ahbwzgqnuk", "tnmlanowax"};
+    cout << obj.numMatchingSubseq2(S, words) << endl;
 
     return 0;
 }

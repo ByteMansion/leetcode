@@ -100,7 +100,7 @@ private:
         }
         int left = 0;
         int right = tbl.size() - 1;
-        while(left < right) {
+        while(left + 1 < right) {
             int mid = left + (right - left) / 2;
             if(tbl[mid] > pos) {
                 right = mid;
