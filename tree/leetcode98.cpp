@@ -12,6 +12,7 @@
 #include "../include/utils.hpp"
 #include <iostream>
 #include <vector>
+#include <stack>
 
 using namespace std;
 
@@ -40,6 +41,28 @@ public:
     bool isValidBST(TreeNode* root)
     {
         return isValidBSTHelper(root, LONG_MIN, LONG_MAX);
+    }
+
+    /**
+     * 2nd solution: inorder traversal
+     *
+     */
+    bool isValidBST2(TreeNode* root)
+    {
+        if(root == NULL) {
+            return true;
+        }
+
+        stack<TreeNode*> nStack;
+        TreeNode* curNode = root;
+        TreeNode* preNode = NULL;
+        while(curNode) {
+            nStack.push(curNode);
+            curNode = curNode->left;
+        }
+        curNode = stack
+
+        return true;
     }
 };
 
