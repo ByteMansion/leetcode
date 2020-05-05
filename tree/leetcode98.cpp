@@ -17,7 +17,7 @@ using namespace std;
 
 class Solution {
 private:
-    bool isValidBSTHelper(TreeNode* root, int minVal, int maxVal)
+    bool isValidBSTHelper(TreeNode* root, long long minVal, long long maxVal)
     {
         if(root == NULL) {
             return true;
@@ -27,12 +27,19 @@ private:
         }
         int left = isValidBSTHelper(root->left, minVal, root->val);
         int right = isValidBSTHelper(root->right, root->val, maxVal);
-        return left & right;
+        return (left && right);
     }
 public:
-    bool isValidBST(TreeNode* root) 
+    /**
+     * 1st solution: recursive method
+     *
+     * This problem is special due to integer limit test cases.
+     * You should change INT_MIN and INT_MAX into LONG_MIN and LONG_MAX.
+     *
+     */
+    bool isValidBST(TreeNode* root)
     {
-        return isValidBSTHelper(root, INT_MIN, INT_MAX);
+        return isValidBSTHelper(root, LONG_MIN, LONG_MAX);
     }
 };
 
