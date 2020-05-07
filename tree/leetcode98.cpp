@@ -13,6 +13,8 @@
 #include <iostream>
 #include <vector>
 #include <stack>
+#include <climits>
+
 
 using namespace std;
 
@@ -47,20 +49,44 @@ public:
      * 2nd solution: inorder traversal
      *
      */
+//#if 0
+    vector<int> inorderTraversal(TreeNode* root)
+    {
+        if(root == NULL) {
+            return vector<int>{};
+        }
+        vector<int> inorder;
+        stack<TreeNode*> nStack;
+        TreeNode* curNode = root;
+        TreeNode* preNode = NULL;
+
+        while(!nStack.empty()) {
+            while(curNode->left != NULL || curNode != preNode) {
+                curNode = curNode->left;
+                nStack.push(curNode);
+            }
+            curNode = nStack.top();
+            nStack.pop();
+            inorder.push_back(curNode->val);
+            cout << curNode->val << endl;
+            preNode = curNode;
+
+            if(curNode->right) {
+                curNode = curNode->right;
+                nStack.push(curNode);
+                preNode = NULL;
+            }
+        }
+
+        return inorder;
+    }
+//#endif
     bool isValidBST2(TreeNode* root)
     {
         if(root == NULL) {
             return true;
         }
 
-        stack<TreeNode*> nStack;
-        TreeNode* curNode = root;
-        TreeNode* preNode = NULL;
-        while(curNode) {
-            nStack.push(curNode);
-            curNode = curNode->left;
-        }
-        curNode = stack
 
         return true;
     }
@@ -77,7 +103,10 @@ int main()
     node2->left = node3; node2->right = node4;
 
     Solution obj;
-    cout << obj.isValidBST(root) << endl;
+    //cout << obj.isValidBST(root) << endl;
+
+    vector<int> inorder = obj.inorderTraversal(root);
+    print_array(inorder);
 
     delete root;
     delete node1; delete node2;
