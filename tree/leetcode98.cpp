@@ -54,13 +54,21 @@ public:
         }
 
         stack<TreeNode*> nStack;
+        nStack.push(root);
         TreeNode* curNode = root;
         TreeNode* preNode = NULL;
-        while(curNode) {
-            nStack.push(curNode);
-            curNode = curNode->left;
+        while(!nStack.empty()) {
+            while(curNode->left) {
+                curNode = curNode->left;
+                nStack.push(curNode);
+            }
+            curNode = nStack.top();
+            nStack.pop();
+            if(curNode->left != preNode) {
+            
+            }
+
         }
-        curNode = stack
 
         return true;
     }
