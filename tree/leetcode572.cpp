@@ -150,7 +150,8 @@ public:
      * 2nd solution: using recursive method
      *
      *  time complexity: O(|s| * |t|)
-     *  space complexity: O(max{|s|, |t|})
+     *  space complexity: if the depth of trees is ds and dt,
+     *   the stack space complexity is O(max{ds, dt}) at any time.
      *
      */
 private:
