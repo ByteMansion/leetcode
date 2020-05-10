@@ -99,7 +99,14 @@ public:
            / \               \
           4   4               4
      *
-     * Therefore, we should add one more condition: height of the subtree.
+     *  Therefore, we should add one more condition: height of the subtree.
+     *
+     *  time complexity: O(|s| * |t|)
+           time complexity of each traversal is O(|t|) and
+           space complexity is O(|t|). In this method, we need to traverse
+           tree t 3 times and then compare traversal results with each subtree 
+           of tree s.
+     * space complexity: O(|s| + |t|)
      *
      */
     bool isSubtree(TreeNode* s, TreeNode* t) {
@@ -138,6 +145,42 @@ public:
         }
         return false;
     }
+
+    /**
+     * 2nd solution: using recursive method
+     *
+     *  time complexity: O(|s| * |t|)
+     *  space complexity: O(max{|s|, |t|})
+     *
+     */
+private:
+    bool check(TreeNode* s, TreeNode* t) {
+        if(!s && !t) {
+            return true;
+        }
+        if((s && !t) || (!s && t) || (s->val != t->val)) {
+            return false;
+        }
+
+        return check(s->left, t->left) && check(s->right, t->right);
+    }
+
+public:
+    bool isSubtree2(TreeNode* s, TreeNode* t) {
+        if(check(s, t))
+            return true;
+
+        bool left = false;
+        bool right = false;
+        if(s->left) {
+            left = isSubtree(s->left, t);
+        }
+        if(s->right) {
+            right = isSubtree(s->right, t);
+        }
+
+        return (left || right);
+    }
 };
 
 int main()
@@ -153,7 +196,7 @@ int main()
     troot.left = &node5; node5.right = &node6;
 
     Solution obj;
-    bool result = obj.isSubtree(&sroot, &troot);
+    bool result = obj.isSubtree2(&sroot, &troot);
     cout << result << endl;
 
     return 0;
