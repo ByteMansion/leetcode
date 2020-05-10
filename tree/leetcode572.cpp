@@ -8,6 +8,8 @@
 #include "../include/utils.hpp"
 #include <stack>
 #include <queue>
+#include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -60,16 +62,52 @@ private:
 
         return inorder;
     }
+    int getHeight(TreeNode* root) {
+        // based on level traversal
+        int height = -1;
+        queue<TreeNode*> qNode;
+        qNode.push(root);
+        TreeNode* node = root;
+        while(!qNode.empty()) {
+            queue<TreeNode*> level;
+            while(!qNode.empty()) {
+                node = qNode.front();
+                qNode.pop();
+                if(node->left) {
+                    level.push(node->left);
+                }
+                if(node->right) {
+                    level.push(node->right);
+                }
+            }
+            qNode = level;
+            height++;
+        }
+        return height;
+    }
 public:
 	/**
      * 1st solution: based on traversal
-     *  this method is low efficiency.
+     *  This method is low efficiency.
+     *
+     *  NOTE: The solution can be accepted if we just get 2 traversals,
+     *  but it is not enough to solve this problem completely.
+     *  For example:
+           s:  3         t:   4
+             /   \           /
+            4     4         4
+           / \               \
+          4   4               4
+     *
+     * Therefore, we should add one more condition: height of the subtree.
+     *
      */
     bool isSubtree(TreeNode* s, TreeNode* t) {
-        // preorder and inorder traversal
-        // 2 traversals can determine a unique tree
+        // preorder and inorder traversal of tree t
         vector<int> tPreorder = preorder(t);
         vector<int> tInorder = inorder(t);
+        int tHeight = getHeight(t);
+        // cout << "tHeight " << tHeight << endl;
 
         // level traversal
         queue<TreeNode*> sQueue;
@@ -83,7 +121,9 @@ public:
                 if(sCur->val == t->val) {
                     vector<int> sPreorder = preorder(sCur);
                     vector<int> sInorder = inorder(sCur);
-                    if(sPreorder == tPreorder && sInorder == tInorder) {
+                    int sHeight = getHeight(sCur);
+                    if(sHeight == tHeight && sPreorder == tPreorder && sInorder == tInorder) {
+                        // cout << "Height " << sHeight << endl;
                         return true;
                     }
                 }
@@ -102,7 +142,19 @@ public:
 
 int main()
 {
+    TreeNode sroot(3);
+    TreeNode node1(4); TreeNode node2(4);
+    TreeNode node3(4); TreeNode node4(4);
+    sroot.left = &node1; sroot.right = &node2;
+    node1.left = &node3; node1.right = &node4;
 
+    TreeNode troot(4);
+    TreeNode node5(4); TreeNode node6(4);
+    troot.left = &node5; node5.right = &node6;
+
+    Solution obj;
+    bool result = obj.isSubtree(&sroot, &troot);
+    cout << result << endl;
 
     return 0;
 }
