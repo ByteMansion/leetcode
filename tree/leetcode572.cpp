@@ -10,6 +10,7 @@
 #include <queue>
 #include <vector>
 #include <iostream>
+#include <climits>
 
 using namespace std;
 
@@ -182,6 +183,110 @@ public:
 
         return (left || right);
     }
+
+    /**
+     * 3rd solution: traversal + KMP
+     *
+     *  This method will be divided into 2 steps:
+     *  1. reconstruct each tree into a full binary tree  
+     *  2. verify if t's traversal is the substring of s'
+     *
+     */
+public:
+    int maxVal;
+    int lNull, rNull;
+    vector<int> sPreorder;
+    vector<int> tPreorder;
+
+    void getMaxElement(TreeNode* root) {
+        if(!root) {
+            return;
+        }
+
+        if(root->val > maxVal) {
+            maxVal = root->val;
+        }
+        getMaxElement(root->left);
+        getMaxElement(root->right);
+    }
+
+    // preorder traversal and change tree into a full binary tree
+    void dfsHelper(TreeNode* root, vector<int>& order) {
+        if(root) {
+            order.push_back(root->val);
+        }
+
+        if(root->left) {
+            dfsHelper(root->left, order);
+        } else {
+            order.push_back(lNull);
+        }
+
+        if(root->right) {
+            dfsHelper(root->right, order);
+        } else {
+            order.push_back(rNull);
+        }
+    }
+#if 0
+    // consider negative number if using rabin-karp algorithm
+    bool rabin_karp(vector<int>& sPreorder, vector<int>& tPreorder) {
+
+    }
+#endif
+    vector<int> computePrefixFunc(vector<int> v) {
+        int len = v.size();
+        vector<int> pi(len, 0);  // prefix function
+        int k = 0;
+
+        for(int q = 2; q < len; q++) {
+            while(k > 0 && v[k+1] != v[q]) {
+                k = pi[k];
+            }
+            if(v[k+1] == v[q]) {
+                k += 1;
+            }
+            pi[q] = k;
+        }
+
+        return pi;
+    }
+    bool kmp(vector<int> sArray, vector<int> tArray) {
+        int sLen = sArray.size();
+        int tLen = tArray.size();
+        int q = 0;
+
+        // preprocess: get prefix function
+        vector<int> pi = computePrefixFunc(tArray);
+
+        for(int i = 1; i < sLen; i++) {
+            while(q > 0 && tArray[q+1] != sArray[i]) {
+                q = pi[q];
+            }
+            if(tArray[q+1] == sArray[i]) {
+                q += 1;
+            }
+            if(q == tLen - 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    bool isSubtree3(TreeNode* s, TreeNode* t) {
+        maxVal = INT_MIN;
+        getMaxElement(s);
+        getMaxElement(t);
+
+        lNull = maxVal + 1;
+        rNull = maxVal + 2;
+
+        dfsHelper(s, sPreorder);
+        dfsHelper(t, tPreorder);
+
+        // return rabin_karp(sPreorder, tPreorder);
+        return kmp(sPreorder, tPreorder);
+    }
 };
 
 int main()
@@ -197,7 +302,7 @@ int main()
     troot.left = &node5; node5.right = &node6;
 
     Solution obj;
-    bool result = obj.isSubtree2(&sroot, &troot);
+    bool result = obj.isSubtree3(&sroot, &troot);
     cout << result << endl;
 
     return 0;
