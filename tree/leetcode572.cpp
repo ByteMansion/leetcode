@@ -236,11 +236,11 @@ public:
 #endif
     vector<int> computePrefixFunc(vector<int> v) {
         int len = v.size();
-        vector<int> pi(len, 0);  // prefix function
-        int k = 0;
+        vector<int> pi(len, -1);  // prefix function
+        int k = -1;
 
-        for(int q = 2; q < len; q++) {
-            while(k > 0 && v[k+1] != v[q]) {
+        for(int q = 1; q < len; q++) {
+            while(k > -1 && v[k+1] != v[q]) {
                 k = pi[k];
             }
             if(v[k+1] == v[q]) {
@@ -254,13 +254,13 @@ public:
     bool kmp(vector<int> sArray, vector<int> tArray) {
         int sLen = sArray.size();
         int tLen = tArray.size();
-        int q = 0;
+        int q = -1;
 
         // preprocess: get prefix function
         vector<int> pi = computePrefixFunc(tArray);
 
         for(int i = 1; i < sLen; i++) {
-            while(q > 0 && tArray[q+1] != sArray[i]) {
+            while(q > -1 && tArray[q+1] != sArray[i]) {
                 q = pi[q];
             }
             if(tArray[q+1] == sArray[i]) {
@@ -284,6 +284,9 @@ public:
         dfsHelper(s, sPreorder);
         dfsHelper(t, tPreorder);
 
+        // print_array(sPreorder);
+        // print_array(tPreorder);
+
         // return rabin_karp(sPreorder, tPreorder);
         return kmp(sPreorder, tPreorder);
     }
@@ -292,14 +295,16 @@ public:
 int main()
 {
     TreeNode sroot(3);
-    TreeNode node1(4); TreeNode node2(4);
-    TreeNode node3(4); TreeNode node4(4);
+    TreeNode node1(4); TreeNode node2(5);
+    TreeNode node3(1); TreeNode node4(2);
     sroot.left = &node1; sroot.right = &node2;
     node1.left = &node3; node1.right = &node4;
 
-    TreeNode troot(4);
-    TreeNode node5(4); TreeNode node6(4);
-    troot.left = &node5; node5.right = &node6;
+    TreeNode troot(5);
+    TreeNode node5(1); TreeNode node6(2);
+    // troot.left = &node5;
+    // node5.right = &node6;
+    // troot.right = &node6;
 
     Solution obj;
     bool result = obj.isSubtree3(&sroot, &troot);
