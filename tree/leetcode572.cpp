@@ -252,10 +252,17 @@ public:
         return pi;
     }
     bool kmp(vector<int> sArray, vector<int> tArray) {
+        if(sArray == tArray) {
+            return true;
+        }
+
         int sLen = sArray.size();
         int tLen = tArray.size();
-        int q = -1;
+        if(sLen < tLen) {
+            return false;
+        }
 
+        int q = -1;
         // preprocess: get prefix function
         vector<int> pi = computePrefixFunc(tArray);
 
