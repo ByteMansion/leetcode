@@ -45,10 +45,6 @@ public:
         return isValidBSTHelper(root, LONG_MIN, LONG_MAX);
     }
 
-    /**
-     * 2nd solution: based on inorder traversal
-     *
-     */
 #if 0
     vector<int> inorderTraversal(TreeNode* root)
     {
@@ -57,55 +53,93 @@ public:
         }
         vector<int> inorder;
         stack<TreeNode*> nStack;
-        nStack.push(root);
         TreeNode* curNode = root;
-        TreeNode* preNode = NULL;
 
-        while(!nStack.empty()) {
-            while(curNode->left && curNode != preNode) {
-                curNode = curNode->left;
+        while(curNode != NULL || !nStack.empty()) {
+            while(curNode) {
                 nStack.push(curNode);
+                curNode = curNode->left;
             }
             curNode = nStack.top();
             nStack.pop();
             inorder.push_back(curNode->val);
-            preNode = curNode;
-
-            if(curNode->right) {
-                curNode = curNode->right;
-                nStack.push(curNode);
-            }
+            curNode = curNode->right;
         }
 
         return inorder;
     }
 #endif
+    /**
+     * 2nd solution: based on inorder traversal
+     *
+     *  Inorder is the most appropriate way to judge a BST,
+     *  but not preorder or postorder.
+     */
     bool isValidBST2(TreeNode* root)
     {
         if(root == NULL) {
             return true;
         }
 
-        // TODO
+        stack<TreeNode*> nStack;
+        TreeNode* cur = root;
+        int bVal;
+        long long int mVal = INT_MIN;
+
+        while(cur || !nStack.empty()) {
+            while(cur) {
+                nStack.push(cur);
+                bVal = cur->val;
+                if(cur->left && cur->left->val >= bVal) {
+                    return false;
+                }
+                if(cur->val <= mVal) {
+                    return false;
+                }
+                cur = cur->left;
+            }
+            cur = nStack.top();
+            nStack.pop();
+            if(cur->right) {
+                mVal = cur->val;
+            }
+            cur = cur->right;
+        }
+
         return true;
     }
 };
 
 int main()
 {
+    /**
+                10
+               /  \
+            5       18
+           / \     /  \
+          3   7   11   20
+             / \      /
+            6   8    19
+
+     */
     TreeNode* root = new TreeNode(10);
     TreeNode* node1 = new TreeNode(5);
-    TreeNode* node2 = new TreeNode(15);
-    TreeNode* node3 = new TreeNode(12);
-    TreeNode* node4 = new TreeNode(20);
-    TreeNode* node5 = new TreeNode(7);
-    TreeNode* node6 = new TreeNode(17);
-    root->left = node1; root->right = node2;
-    node2->left = node3; node2->right = node4;
-    node1->right = node5; node4->left = node6;
+    TreeNode* node2 = new TreeNode(18);
+    TreeNode* node3 = new TreeNode(3);
+    TreeNode* node4 = new TreeNode(7);
+    TreeNode* node5 = new TreeNode(11);
+    TreeNode* node6 = new TreeNode(20);
+    TreeNode* node7 = new TreeNode(6);
+    TreeNode* node8 = new TreeNode(8);
+    TreeNode* node9 = new TreeNode(19);
+    root->left = node1;  root->right = node2;
+    node1->left = node3; node1->right = node4;
+    node2->left = node5; node2->right = node6;
+    node4->left = node7; node4->right = node8;
+    node6->left = node9;
 
     Solution obj;
-    cout << obj.isValidBST(root) << endl;
+    cout << obj.isValidBST2(root) << endl;
 #if 0
     vector<int> inorder = obj.inorderTraversal(root);
     print_array(inorder);
@@ -114,6 +148,8 @@ int main()
     delete node1; delete node2;
     delete node3; delete node4;
     delete node5; delete node6;
+    delete node7; delete node8;
+    delete node9;
 
     return 0;
 }
