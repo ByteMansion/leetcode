@@ -12,6 +12,7 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#include <map>
 
 using namespace std;
 
@@ -22,23 +23,24 @@ public:
             return s.length();
         }
         // construct a mapping from letter to count
-        vector<int> cTable(52, 0);
+        map<char, int> cTable;
         for(int idx = 0; idx < s.length(); idx++) {
-            cTable[s[idx] - 'A'] += 1;
+            cTable[s[idx]] += 1;
         }
 
-        int maxOdd = INT_MIN;
+        int existOdd = 0;
         int sumEven = 0;
-        for(int idx = 0; idx < 52; idx++) {
-            int count = cTable[idx];
+        for(char iter = 'A'; iter <= 'z'; iter++) {
+            int count = cTable[iter];
             if(count % 2) {
-                maxOdd = max(maxOdd, count);
+                existOdd = 1;
+                sumEven += count - 1;
             } else {
                 sumEven += count;
             }
         }
 
-        return (sumEven + maxOdd);
+        return (sumEven + existOdd);
     }
 };
 
