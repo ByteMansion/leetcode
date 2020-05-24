@@ -74,6 +74,12 @@ public:
      *
      *  Inorder is the most appropriate way to judge a BST,
      *  but not preorder or postorder.
+     *  NOTE:
+     *  1. How to guarantee all node values of right subtree should be
+     *     greater than root value, especially its left subtree values?
+     *  2. How to guarantee all node values of left subtree should be less
+     *     than root value, especially its right subtree values?
+     *  3. The subtrees of each subtree should abide by above 2 rules.
      */
     bool isValidBST2(TreeNode* root)
     {
@@ -84,16 +90,18 @@ public:
         stack<TreeNode*> nStack;
         TreeNode* cur = root;
         int bVal;
-        long long int mVal = INT_MIN;
+        long long int rMinVal = LONG_MIN;
+        long long int lMaxVal = LONG_MAX;
 
         while(cur || !nStack.empty()) {
             while(cur) {
                 nStack.push(cur);
+                // root node of subtree
                 bVal = cur->val;
-                if(cur->left && cur->left->val >= bVal) {
+                if(bVal <= rMinVal || bVal >= lMaxVal) {
                     return false;
                 }
-                if(cur->val <= mVal) {
+                if(cur->left && cur->left->val >= bVal) {
                     return false;
                 }
                 cur = cur->left;
@@ -101,7 +109,13 @@ public:
             cur = nStack.top();
             nStack.pop();
             if(cur->right) {
-                mVal = cur->val;
+                rMinVal = cur->val;
+                if(!nStack.empty()) {
+                    TreeNode* node = nStack.top();
+                    lMaxVal = node->val;
+                } else {
+                    lMaxVal = LONG_MAX;
+                }
             }
             cur = cur->right;
         }
