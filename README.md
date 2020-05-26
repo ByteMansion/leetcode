@@ -6,6 +6,7 @@ one by one.
 
 |No.|Leetcode Problems|Solutions|Related Knowledge|
 |-|-|-|-|
+|5|[Leetcode 5 Longest Palindrom Substring](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[solution](./string/leetcode5.cpp)||
 |31|[Leetcode 31 nextPermutation](https://leetcode.com/problems/next-permutation/)|[solution](./array/permutation/leetcode31.cpp)||
 |46|[Leetcode 46 Permutations](https://leetcode.com/problems/permutations/)|[solution](./array/permutation/leetcode46.cpp)||
 |47|[Leetcode 47 Permutations II](https://leetcode.com/problems/permutations-ii/)|[solution](./array/permutation/leetcode47.cpp)||
