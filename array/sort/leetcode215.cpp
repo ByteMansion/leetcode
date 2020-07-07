@@ -122,8 +122,7 @@ private:
         }
         if(largest != i) {
             swap(nums[i], nums[largest]);
-            i++;
-            maxHeapify(nums, i, heapsize);
+            maxHeapify(nums, largest, heapsize);
         }
     }
 };
