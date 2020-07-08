@@ -33,6 +33,10 @@ public:
     /**
      * 2nd solution: use quicksort algorithm
      *
+     * - time complexity: O(n)
+     * - space complexity: O(logn), this is the stack cost
+     *   using recursive method.
+     *
      */
     int findKthLargest2(vector<int>& nums, int k) {
         srand(time(0));
@@ -59,7 +63,7 @@ private:
     inline int randomPartition(vector<int>& nums, int l, int r)
     {
         int p = rand() % (r - l + 1) + l;
-        swap(nums[p], nums[r]);  // exchange p-th element with right index
+        swap(nums[p], nums[r]);
         return paritition(nums, l, r);
     }
 
@@ -82,6 +86,10 @@ public:
      *
      * Special data structure, such as heap or priority can solve this
      * issue, but heap sort is preferred for interviewee.
+     *
+     * - time complexity: O(nlogn), cost of building heap O(n), delete element
+     *   and then rebuild heap O(klogn) (k < n), total cost O(n + klogn)=O(nlogn)
+     * - space complexity: O(logn)
      */
     int findKthLargest3(vector<int>& nums, int k)
     {
