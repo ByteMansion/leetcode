@@ -8,19 +8,25 @@
 
 #include "../include/utils.hpp"
 #include <iostream>
+#include <vector>
+#include <stack>
 
 using namespace std;
 
 class Solution {
 public:
+	/**
+     * 1st solution: postorder traversal using recursive method
+     *
+     */
     bool hasPathSum(TreeNode* root, int sum) {
         int  curSum = 0;
         bool isExist = false;
-        postOrderHelper(root, sum, curSum, isExist);
+        postorderHelper(root, sum, curSum, isExist);
         return isExist;
     }
 private:
-    void postOrderHelper(TreeNode* root, const int sum, int& curSum, bool& isExist) {
+    void postorderHelper(TreeNode* root, const int sum, int& curSum, bool& isExist) {
         if(root == NULL) {
             return;
         }
@@ -29,9 +35,53 @@ private:
            curSum == sum) {
             isExist = true;
         }
-        postOrderHelper(root->left, sum, curSum, isExist);
-        postOrderHelper(root->right, sum, curSum, isExist);
+        postorderHelper(root->left, sum, curSum, isExist);
+        postorderHelper(root->right, sum, curSum, isExist);
         curSum -= root->val;
+    }
+
+public:
+    /**
+     * 2nd solution: postorder traversal using non-recursive method
+     *
+     */
+    bool hasPathSum2(TreeNode* root, int sum) {
+        bool isExist = false;
+        postorderNonrecursive(root, sum, isExist);
+
+        return isExist;
+    }
+private:
+	/**
+	 * binary tree postorder traversal
+     */
+    void postorderNonrecursive(TreeNode* root, const int target, bool& exist) {
+        stack<TreeNode*> sTraversal;
+        TreeNode* node = root;
+        TreeNode* pre = NULL;
+        int  sum = 0;
+
+        while(node || !sTraversal.empty()) {
+            while(node) {
+                sum += node->val;
+                sTraversal.push(node);
+                node = node->left;
+            }
+            node = sTraversal.top();
+
+            if(node->right && node->right != pre) {
+                node = node->right;
+            } else {
+                if(node->left == NULL && node->right == NULL &&
+                   sum == target) {
+                    exist = true;
+                }
+                sum -= node->val;
+                sTraversal.pop();
+                pre = node;
+                node = NULL;
+            }
+        }
     }
 };
 
@@ -57,17 +107,17 @@ int main()
 
     // case 1: sum = 22
     sum = 22;
-    exist = obj.hasPathSum(root, sum);
+    exist = obj.hasPathSum2(root, sum);
     cout << "sum: " << sum << ", exist: " << exist << endl;
 
     // case 2: sum = 26
     sum = 26;
-    exist = obj.hasPathSum(root, sum);
+    exist = obj.hasPathSum2(root, sum);
     cout << "sum: " << sum << ", exist: " << exist << endl;
 
     // case 3: sum = 15
     sum = 15;
-    exist = obj.hasPathSum(root, sum);
+    exist = obj.hasPathSum2(root, sum);
     cout << "sum: " << sum << ", exist: " << exist << endl;
 
     return 0;

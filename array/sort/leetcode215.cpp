@@ -138,8 +138,8 @@ private:
 
 int main()
 {
-	vector<int> nums;
-	Solution obj;
+    vector<int> nums;
+    Solution obj;
     int k;
 
     // case 1
@@ -156,7 +156,7 @@ int main()
     cout << k << endl;
     cout << obj.findKthLargest3(nums, k) << endl;
 
-	return 0;
+    return 0;
 }
 
 
