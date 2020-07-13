@@ -18,6 +18,8 @@ public:
 	/**
      * 1st solution: postorder traversal using recursive method
      *
+     * - time complexity: O(n), n is the tree node count
+     * - space complexity: O(h), h is height of the tree
      */
     bool hasPathSum(TreeNode* root, int sum) {
         int  curSum = 0;
@@ -34,6 +36,7 @@ private:
         if(root->left == NULL && root->right == NULL &&
            curSum == sum) {
             isExist = true;
+            return;
         }
         postorderHelper(root->left, sum, curSum, isExist);
         postorderHelper(root->right, sum, curSum, isExist);
@@ -44,6 +47,8 @@ public:
     /**
      * 2nd solution: postorder traversal using non-recursive method
      *
+     * - time complexity: O(n), n is the tree node count
+     * - space complexity: O(1)
      */
     bool hasPathSum2(TreeNode* root, int sum) {
         bool isExist = false;
@@ -75,6 +80,7 @@ private:
                 if(node->left == NULL && node->right == NULL &&
                    sum == target) {
                     exist = true;
+                    return;
                 }
                 sum -= node->val;
                 sTraversal.pop();
