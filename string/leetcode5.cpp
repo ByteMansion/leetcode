@@ -79,7 +79,7 @@ public:
                 if(s[i] != s[j]) {
                     dp[i][j] = false;
                 } else {
-                    if(j - i < 4) {
+                    if(j - i < 3) {
                         dp[i][j] = true;
                     } else {
                         dp[i][j] = dp[i+1][j-1];
