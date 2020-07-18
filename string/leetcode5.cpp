@@ -28,56 +28,73 @@ public:
     /**
      * 1st solution: brute-force
      *
-     *  time complexity: O(n^3)
+     * - time complexity: O(n^3)
+     * - space complexity: O(1)
      */
     string longestPalindrome(string s) {
         if(s.length() == 0 || s.length() == 1) {
             return s;
         }
 
-        int maxLen = 1;
+        int mLen = 1;
         int sPos = 0;
         for(int start = 0; start < s.length(); start++) {
-            for(int end = start + 1; end <= s.length(); end++) {
-                // string index: [start, end)
-                if(isPalindrom(start, end, s)) {
-                    if(maxLen < end - start) {
-                        maxLen = end - start;
-                        sPos = start;
-                    }
+            for(int end = start + 1; end < s.length() + 1; end++) {
+                // substring index range: [start, end)
+                if((end - start > mLen) && isPalindrom(start, end, s)) {
+                    mLen = end - start;
+                    sPos = start;
                 }
             }
         }
 
-        return s.substr(sPos, maxLen);
+        return s.substr(sPos, mLen);
     }
-#if 0
-    string longestPalindrome(string s) {
-        if(s.length() == 0 || s.length() == 1) {
+
+public:
+    /**
+     * 2nd solution: dynamic programming
+     * dp[i][j]: means the string s[i..j] is palindrom or not
+     *
+     * - time complexity:
+     * - space complexity: O(n^2)
+     */
+    string longestPalindrome2(string s) {
+        if(s.length() < 2) {
             return s;
         }
 
-        int start = 0;
-        int strLen = s.length();
-        /**
-          dp[i]: the longest length of the palindrom, whose ending letter is the ith letter, default value is 1
-           dp[i] = dp[i-1]+2 if dp[i] == dp[i-dp[i-1]]
-           dp[i] = dp[i-1]+1 if dp[i] == dp[i-1]
-         */
-        vector<int> dp(strLen, 1);
+        string result;
+        int len = s.length();
+        int dp[len][len];
+        // init special value
+        for(int i = 0; i < len; i++) {
+            dp[i][i] = true;
+        }
+
         int maxLen = 1;
-        int index;
-        for(int i = 1; i < strLen; i++) {
-            if(i-dp[i] >= 0 && s[i+1] == s[i-dp[i]]) {
-                dp[i+1] = dp[i] + 2;
-                index = i - dp[i-1] - 1;
+        int start = 0;
+        for(int j = 1; j < len; j++) {
+            for(int i = 0; i < j; i++) {
+                if(s[i] != s[j]) {
+                    dp[i][j] = false;
+                } else {
+                    if(j - i < 4) {
+                        dp[i][j] = true;
+                    } else {
+                        dp[i][j] = dp[i+1][j-1];
+                    }
+                }
+
+                if(dp[i][j] && j-i+1 > maxLen) {
+                    maxLen = j-i+1;
+                    start = i;
+                }
             }
         }
 
         return s.substr(start, maxLen);
-
     }
-#endif
 };
 
 int main()
@@ -87,11 +104,11 @@ int main()
 
     // case 1
     s = "babad";
-    cout << obj.longestPalindrome(s) << endl;
+    cout << s << endl << obj.longestPalindrome2(s) << endl;
 
     // case 2
     s = "cbbd";
-    cout << obj.longestPalindrome(s) << endl;
+    cout << s << endl << obj.longestPalindrome2(s) << endl;
 
     return 0;
 }
