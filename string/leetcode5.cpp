@@ -56,7 +56,7 @@ public:
      * 2nd solution: dynamic programming
      * dp[i][j]: means the string s[i..j] is palindrom or not
      *
-     * - time complexity:
+     * - time complexity: O(n^2)
      * - space complexity: O(n^2)
      */
     string longestPalindrome2(string s) {
@@ -87,6 +87,55 @@ public:
                 }
 
                 if(dp[i][j] && j-i+1 > maxLen) {
+                    maxLen = j-i+1;
+                    start = i;
+                }
+            }
+        }
+
+        return s.substr(start, maxLen);
+    }
+
+public:
+    /**
+     * 3rd solution: dynamic programming
+     * This solution is same as 2nd solution except for less
+     * space, using 1 dimension array to replace 2 dimensions
+     * array. But the space complexity is same as 2nd solution.
+     *
+     * time complexity: O(n^2)
+     * space complexity: O(n^2)
+     *
+     */
+    string longestPalindrome3(string s) {
+        if(s.length() < 2) {
+            return s;
+        }
+
+        string result;
+        int len = s.length();
+        // using 1 dimension array to replace 2 dimensions array
+        int dp[len*(len+1) >> 1];
+        // init special value
+        for(int i = 0; i < len; i++) {
+            dp[i*(1+i)/2+i] = true;
+        }
+
+        int maxLen = 1;
+        int start = 0;
+        for(int j = 1; j < len; j++) {
+            for(int i = 0; i < j; i++) {
+                if(s[i] != s[j]) {
+                    dp[i*(1+i)/2+j] = false;
+                } else {
+                    if(j - i < 3) {
+                        dp[i*(i+1)/2+j] = true;
+                    } else {
+                        dp[i*(1+i)/2+j] = dp[(i+1)*(i+2)/2+j-1];
+                    }
+                }
+
+                if(dp[i*(i+1)/2+j] && j-i+1 > maxLen) {
                     maxLen = j-i+1;
                     start = i;
                 }
