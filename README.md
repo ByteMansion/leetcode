@@ -11,7 +11,7 @@ one by one.
 |46|[Leetcode 46 Permutations](https://leetcode.com/problems/permutations/)|[solution](./array/permutation/leetcode46.cpp)||
 |47|[Leetcode 47 Permutations II](https://leetcode.com/problems/permutations-ii/)|[solution](./array/permutation/leetcode47.cpp)||
 |70|[Leetcode 70 Climbing Stirs](https://leetcode.com/problems/climbing-stairs/)|[solution](./dp/leetcode70.cpp)|dynamic programming|
-|79|[Leetcode 79 Word Search](https://leetcode-cn.com/problems/word-search/)|[solution](./dp/leetcode79.cpp)||
+|79|[Leetcode 79 Word Search](https://leetcode-cn.com/problems/word-search/)|[solution](./array/leetcode79.cpp)||
 |92|[Leetcode 92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[solution](./linkedlist/leetcode92.cpp)||
 |98|[Leetcode 98 Validate Binary Search Tree](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[solution](./tree/leetcode98.cpp)||
 |112|[Leetcode 112 Path Sum](https://leetcode-cn.com/problems/path-sum/)|[solution](./tree/leetcode112.cpp)|postorder traversal|
