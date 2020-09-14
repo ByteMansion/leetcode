@@ -67,10 +67,13 @@ private:
 };
 int main()
 {
-    vector<vector<char>> board = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
+    vector<vector<char>> board; 
     Solution obj;
+    string word;
+
+    board = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
     // case 1
-    string word = "ABCCED";
+    word = "ABCCED";
     cout << word << ":" << obj.exist(board, word) << endl;
 
     // case 2
@@ -80,6 +83,12 @@ int main()
     // case 3
     word = "ABCB";
     cout << word << ":" << obj.exist(board, word) << endl;
+
+    board = {{'a','a','a','a'},{'a','a','a','a'},{'a','a','a','a'},{'a','a','a','a'}};
+    // case 1
+    word = "aaaaaaaaaaaaaaab";
+    cout << word << ":" << obj.exist(board, word) << endl;
+
 
     return 0;
 }
