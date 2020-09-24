@@ -52,3 +52,21 @@ void print_array(const vector<int> &array)
     cout << endl;
 }
 
+static void preorder(const Treenode* root)
+{
+    if(root == nullptr) {
+        return;
+    }
+    cout << root->val << " ";
+    preorder(root->left);
+    preorder(root->right);
+}
+void print_tree(const TreeNode* root)
+{
+    if(root == nullptr) {
+        cout << "[This tree is empty!]" << endl;
+        return;
+    }
+    preorder(root);
+    cout << endl;
+}
