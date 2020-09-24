@@ -21,6 +21,7 @@ one by one.
 |350|[Leetcode 350 Intersection of Two Arrays II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)|[solution](./array/leetcode350.cpp)||
 |392|[Leetcode 392 Is Subsequence](https://leetcode.com/problems/is-subsequence/)|[solution](./dp/leetcode392.cpp)||
 |409|[Leetcode 409 Longest Palindrom](https://leetcode-cn.com/problems/longest-palindrome/)|[solution](./string/leetcode409.cpp)||
+|538|[Leetcode 538 Convert BST to Greater Tree](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)|[solution](./tree/leetcode538.cpp)||
 |572|[Leetcode 572 Subtree of Another Tree](https://leetcode-cn.com/problems/subtree-of-another-tree/)|[solution](./tree/leetcode572.cpp)||
 |746|[Leetcode 746 Min Cost Climbing Stirs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[solution](./dp/leetcode746.cpp)|dynamic programming|
 |792|[Leetcode 792 Number of Matching Subsequences](https://leetcode.com/problems/number-of-matching-subsequences/)|[solution](./dp/leetcode792.cpp)||
