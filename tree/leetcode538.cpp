@@ -60,11 +60,50 @@ public:
      *
      */
     TreeNode* convertBST3(TreeNode* root) {
-        
+        int sum = 0;
+        TreeNode* pCurr = root;
+        TreeNode* pNode = NULL;
+        while(pCurr) {
+            if(pCurr->right == NULL) {
+                sum += pCurr->val;
+                pCurr->val = sum;
+                pCurr = pCurr->left;
+            } else {
+                pNode = pCurr->right;
+                while(pNode->left && pNode->left != pCurr) {
+                    pNode = pNode->left;
+                }
+                if(pNode->left == NULL) {
+                    pNode->left = pCurr;
+                    pCurr = pCurr->right;
+                } else {
+                    pNode->left = NULL;
+                    sum += pCurr->val;
+                    pCurr->val = sum;
+                    pCurr = pCurr->left;
+                }
+            }
+
+        }
+        return root;
     }
 };
 
 int main()
 {
+    TreeNode* root = new TreeNode(2);
+    TreeNode* left = new TreeNode(3);
+    TreeNode* right = new TreeNode(13);
+    root->left = left; root->right = right;
     
+    Solution* obj;
+    obj.convertBST3(root);
+    
+    print_tree(root);
+    
+    delete root;
+    delete left;
+    delete right;
+    
+    return 0;
 }
