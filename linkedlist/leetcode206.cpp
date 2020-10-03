@@ -66,13 +66,12 @@ int main()
     head->next = node2;
     node2->next = node3;
     node3->next = node4;
+    node4->next = NULL;
 
     Solution object;
     print_linkedlist(head);
-    head = object.reverseList2(head);
+    head = object.reverseList(head);
     print_linkedlist(head);
-
-    delete head; delete node2; delete node3; delete node4;
 
     return 0;
 }

@@ -25,12 +25,11 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-void print_linkedlist(ListNode* head)
+void print_linkedlist(ListNode* node)
 {
-    if(head == NULL) {
+    if(node == NULL) {
         cout << "Empty Linked List!" << endl;
     }
-    ListNode* node = head;
     while(node != NULL) {
         cout << node->val << " ";
         node = node->next;
@@ -52,7 +51,7 @@ void print_array(const vector<int> &array)
     cout << endl;
 }
 
-static void preorder(const Treenode* root)
+static void preorder(const TreeNode* root)
 {
     if(root == nullptr) {
         return;
