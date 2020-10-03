@@ -97,7 +97,7 @@ int main()
     root->left = left; root->right = right;
     
     Solution* obj;
-    obj.convertBST3(root);
+    obj->convertBST3(root);
     
     print_tree(root);
     
