@@ -51,6 +51,27 @@ void print_array(const vector<int> &array)
     cout << endl;
 }
 
+ListNode* create_linkedlist(vector<int> num)
+{
+    if(num.empty()) {
+        cout << "Empty Linkedlist!" << endl;
+        return nullptr;
+    }
+    ListNode* head = nullptr;
+    ListNode* node = nullptr;
+    for(auto n : num) {
+        ListNode* tNode = new ListNode(n);
+        if(head == nullptr) {
+            head = tNode;
+            node = tNode;
+            continue;
+        }
+        node->next = tNode;
+        node = tNode;
+    }
+    return head;
+}
+
 static void preorder(const TreeNode* root)
 {
     if(root == nullptr) {
