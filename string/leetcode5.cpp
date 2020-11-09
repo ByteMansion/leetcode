@@ -16,7 +16,7 @@ class Solution {
 private:
     bool isPalindrom(int start, int end, string s) {
         while(start < end) {
-            if(s[start] != s[end-1]) {
+            if(s[start] != s[end]) {
                 return false;
             }
             start++;
@@ -39,10 +39,10 @@ public:
         int mLen = 1;
         int sPos = 0;
         for(int start = 0; start < s.length(); start++) {
-            for(int end = start + 1; end < s.length() + 1; end++) {
+            for(int end = start; end < s.length(); end++) {
                 // substring index range: [start, end)
-                if((end - start > mLen) && isPalindrom(start, end, s)) {
-                    mLen = end - start;
+                if((end - start + 1 > mLen) && isPalindrom(start, end, s)) {
+                    mLen = end - start + 1;
                     sPos = start;
                 }
             }
@@ -153,11 +153,11 @@ int main()
 
     // case 1
     s = "babad";
-    cout << s << endl << obj.longestPalindrome2(s) << endl;
+    cout << s << endl << obj.longestPalindrome(s) << endl;
 
     // case 2
     s = "cbbd";
-    cout << s << endl << obj.longestPalindrome2(s) << endl;
+    cout << s << endl << obj.longestPalindrome(s) << endl;
 
     return 0;
 }
