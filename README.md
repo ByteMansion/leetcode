@@ -17,6 +17,7 @@ one by one.
 |92|[Leetcode 92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[solution](./linkedlist/leetcode92.cpp)||
 |98|[Leetcode 98 Validate Binary Search Tree](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[solution](./tree/leetcode98.cpp)||
 |112|[Leetcode 112 Path Sum](https://leetcode-cn.com/problems/path-sum/)|[solution](./tree/leetcode112.cpp)|postorder traversal|
+|121|[Leetcode 121 Best Time to Buy and Sell Stock](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|[solution](./array/leetcode121.cpp)||
 |206|[Leetcode 206 Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[solution](./linkedlist/leetcode206.cpp)||
 |215|[Leetcode 215 Kth Largest Element in An Array](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)|[solution](./array/sort/leetcode215.cpp)||
 |322|[Leetcode 322 Coin Change](https://leetcode-cn.com/problems/coin-change/)|[solution](./dp/leetcode322.cpp)||
