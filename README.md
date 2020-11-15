@@ -29,5 +29,5 @@ one by one.
 |572|[Leetcode 572 Subtree of Another Tree](https://leetcode-cn.com/problems/subtree-of-another-tree/)|[solution](./tree/leetcode572.cpp)||
 |746|[Leetcode 746 Min Cost Climbing Stirs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[solution](./dp/leetcode746.cpp)|dynamic programming|
 |792|[Leetcode 792 Number of Matching Subsequences](https://leetcode.com/problems/number-of-matching-subsequences/)|[solution](./dp/leetcode792.cpp)||
-|992|[Leetcode 992 Subarrays with K Different Integers](https://leetcode-cn.com/problems/subarrays-with-k-different-integers/)|[solution](./array/leetcode992.cpp)||
+|992|*[Leetcode 992 Subarrays with K Different Integers](https://leetcode-cn.com/problems/subarrays-with-k-different-integers/)|[solution](./array/leetcode992.cpp)|sliding window|
 |996|[Leetcode 996 Number of Squareful Arrays](https://leetcode.com/problems/number-of-squareful-arrays/)|[solution](./array/permutation/leetcode996.cpp)||
