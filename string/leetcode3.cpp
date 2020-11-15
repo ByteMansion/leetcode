@@ -22,9 +22,11 @@ public:
         int leftIdx = 0;
         for(int idx = 0; idx < s.length(); idx++) {
             char ch = s[idx];
+            // find duplicate character, then move left index
             if(mChToIdx.find(ch) != mChToIdx.end() && mChToIdx[ch] >= leftIdx) {
                 leftIdx = mChToIdx[ch] + 1;
             }
+            // update character index
             mChToIdx[ch] = idx;
             maxLen = max(idx-leftIdx+1, maxLen);
         }
