@@ -7,7 +7,7 @@ one by one.
 |No.|Leetcode Problems|Solutions|Related Knowledge|
 |-|-|-|-|
 |2|[Leetcode 2 Add Two Numbers](https://leetcode-cn.com/problems/add-two-numbers/)|[solution](./linkedlist/leetcode2.cpp)||
-|3|[Leetcode 3 Longest Substring Without Repeating Characters](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)|[solution](./string/leetcode3.cpp)||
+|3|[Leetcode 3 Longest Substring Without Repeating Characters](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)|[solution](./string/leetcode3.cpp)|sliding window|
 |5|[Leetcode 5 Longest Palindrom Substring](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[solution](./string/leetcode5.cpp)||
 |31|[Leetcode 31 nextPermutation](https://leetcode.com/problems/next-permutation/)|[solution](./array/permutation/leetcode31.cpp)||
 |46|[Leetcode 46 Permutations](https://leetcode.com/problems/permutations/)|[solution](./array/permutation/leetcode46.cpp)||
@@ -28,6 +28,7 @@ one by one.
 |409|[Leetcode 409 Longest Palindrom](https://leetcode-cn.com/problems/longest-palindrome/)|[solution](./string/leetcode409.cpp)||
 |538|[Leetcode 538 Convert BST to Greater Tree](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)|[solution](./tree/leetcode538.cpp)||
 |572|[Leetcode 572 Subtree of Another Tree](https://leetcode-cn.com/problems/subtree-of-another-tree/)|[solution](./tree/leetcode572.cpp)||
+|718|[Leetcode 718 Maximum Length of Repeated Subarray](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|[solution](./array/leetcode718.cpp)|dynamic programming|
 |746|[Leetcode 746 Min Cost Climbing Stirs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[solution](./dp/leetcode746.cpp)|dynamic programming|
 |792|[Leetcode 792 Number of Matching Subsequences](https://leetcode.com/problems/number-of-matching-subsequences/)|[solution](./dp/leetcode792.cpp)||
 |992|*[Leetcode 992 Subarrays with K Different Integers](https://leetcode-cn.com/problems/subarrays-with-k-different-integers/)|[solution](./array/leetcode992.cpp)|sliding window|
