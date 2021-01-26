@@ -90,6 +90,39 @@ public:
         }
         return head;
     }
+	/**
+	 @brief	Simplify above code
+	 */
+	ListNode* addTwoNumbers2(ListNode* l1, ListNode* l2) {
+		if (l1 == nullptr) {
+			return l2;
+		} else if (l2 == nullptr) {
+			return l1;
+		}
+		int carry = 0;
+		ListNode* head = new ListNode(-1);
+		ListNode* iNode = head;
+		while(l1 || l2) {
+			int sum = 0;
+			if (l1) {
+				sum += l1->val;
+				l1 = l1->next;
+			}
+			if (l2) {
+				sum += l2->val;
+				l2 = l2->next;
+			}
+			sum += carry;
+			carry = sum / 10;
+			sum %= 10;
+			iNode->next = new ListNode(sum);
+			iNode = iNode->next;
+		}
+		if(carry) {
+			iNode->next = new ListNode(carry);
+		}
+		return head->next;
+	}
 };
 int main()
 {
@@ -107,7 +140,7 @@ int main()
     in2 = {5, 6, 4};
     l2 = create_linkedlist(in2);
     print_linkedlist(l2);
-    out = obj.addTwoNumbers(l1, l2);
+    out = obj.addTwoNumbers2(l1, l2);
     print_linkedlist(out);
 
     // case 2
@@ -117,7 +150,7 @@ int main()
     in2 = {9, 9, 9, 9};
     l2 = create_linkedlist(in2);
     print_linkedlist(l2);
-    out = obj.addTwoNumbers(l1, l2);
+    out = obj.addTwoNumbers2(l1, l2);
     print_linkedlist(out);
 
     return 0;
