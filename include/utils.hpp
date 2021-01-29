@@ -39,7 +39,7 @@ void print_linkedlist(ListNode* node)
     cout << endl;
 }
 
-void print_array(const vector<int> &array)
+void print_array(const vector<int>& array)
 {
     if(array.empty() || array.size() <= 0) {
         cout << "[This array is empty!]" << endl;
@@ -51,6 +51,16 @@ void print_array(const vector<int> &array)
         cout << array[index] << " ";
     }
     cout << endl;
+}
+
+void print_2d_array(const vector<vector<int>>& array)
+{
+    if(array.empty()) {
+        cout << "Empty 2D array!" << endl;
+    }
+    for(int i = 0; i < array.size(); i++) {
+        print_array(array[i]);
+    }
 }
 
 ListNode* create_linkedlist(vector<int> num)
