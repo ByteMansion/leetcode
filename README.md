@@ -13,7 +13,7 @@ one by one.
 |46|[Leetcode 46 Permutations](https://leetcode.com/problems/permutations/)|[solution](./array/permutation/leetcode46.cpp)||
 |47|[Leetcode 47 Permutations II](https://leetcode.com/problems/permutations-ii/)|[solution](./array/permutation/leetcode47.cpp)||
 |53|[Leetcode 53 Maximum Subarray](https://leetcode-cn.com/problems/maximum-subarray/)|[solution](./array/leetcode53.cpp)||
-|64|[Leetcode 64 Minimum Path Sum](https://leetcode-cn.com/problems/minimum-path-sum/)|[solution](./array/leetcode64.cpp)||
+|64|[Leetcode 64 Minimum Path Sum](https://leetcode-cn.com/problems/minimum-path-sum/)|[solution](./array/leetcode64.cpp)|dynamic programming|
 |70|[Leetcode 70 Climbing Stirs](https://leetcode.com/problems/climbing-stairs/)|[solution](./dp/leetcode70.cpp)|dynamic programming|
 |76|[Leetcode 76 Minimum Window Substring](https://leetcode-cn.com/problems/minimum-window-substring/)|[solution](./string/leetcode76.cpp)||
 |79|[Leetcode 79 Word Search](https://leetcode-cn.com/problems/word-search/)|[solution](./array/leetcode79.cpp)||
@@ -33,5 +33,6 @@ one by one.
 |718|[Leetcode 718 Maximum Length of Repeated Subarray](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|[solution](./array/leetcode718.cpp)|dynamic programming|
 |746|[Leetcode 746 Min Cost Climbing Stirs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[solution](./dp/leetcode746.cpp)|dynamic programming|
 |792|[Leetcode 792 Number of Matching Subsequences](https://leetcode.com/problems/number-of-matching-subsequences/)|[solution](./dp/leetcode792.cpp)||
+|875|[Leetcode 875](https://leetcode-cn.com/problems/koko-eating-bananas/)|[solution](./array/leetcode875.cpp)||
 |992|[Leetcode 992 Subarrays with K Different Integers](https://leetcode-cn.com/problems/subarrays-with-k-different-integers/)|[solution](./array/leetcode992.cpp)|sliding window|
 |996|[Leetcode 996 Number of Squareful Arrays](https://leetcode.com/problems/number-of-squareful-arrays/)|[solution](./array/permutation/leetcode996.cpp)||
