@@ -19,7 +19,7 @@ one by one.
 |79|[Leetcode 79 Word Search](https://leetcode-cn.com/problems/word-search/)|[solution](./array/leetcode79.cpp)||
 |92|[Leetcode 92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[solution](./linkedlist/leetcode92.cpp)||
 |95|[Leetcode 95 Unique Binary Search Trees II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/)|[solution](./tree/leetcode95.cpp)|recursive method|
-|96|[Leetcode 96 Unique Binary Search Trees](https://leetcode-cn.com/problems/unique-binary-search-trees/)|[solution](./number/leetcode96.cpp)|dynamic programming|
+|96|[Leetcode 96 Unique Binary Search Trees](https://leetcode-cn.com/problems/unique-binary-search-trees/)|[solution](./tree/leetcode96.cpp)|dynamic programming|
 |98|[Leetcode 98 Validate Binary Search Tree](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[solution](./tree/leetcode98.cpp)||
 |112|[Leetcode 112 Path Sum](https://leetcode-cn.com/problems/path-sum/)|[solution](./tree/leetcode112.cpp)|postorder traversal|
 |121|[Leetcode 121 Best Time to Buy and Sell Stock](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|[solution](./array/leetcode121.cpp)||
