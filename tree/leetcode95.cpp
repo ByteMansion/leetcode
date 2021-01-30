@@ -6,7 +6,7 @@
  * Given an integer n, return all the structurally unique BST's (binary
  * search trees), which has exactly n nodes of unique values from 1 to n.
  * Return the answer in any order.
- * 
+ * (1 <= n <= 8)
  */
 #include "../include/utils.hpp"
 
@@ -25,6 +25,7 @@ using namespace std;
  */
 class Solution {
 public:
+
     vector<TreeNode*> generateTreesHelper(int start, int end) {
         if(start > end) {
             return {nullptr};  // Cannot return empty vector, but a vector with null pointer
@@ -46,10 +47,54 @@ public:
         }
         return results;
     }
+    /**
+     * @brief recursive method
+     * 
+     * @param n 
+     * @return vector<TreeNode*> 
+     */
     vector<TreeNode*> generateTrees(int n) {
         // generate tree from start to end
         return generateTreesHelper(1, n); 
     }
+
+public:
+    /**
+     * @brief dynamic programming
+     * 
+     * @param n 
+     * @return vector<TreeNode*> 
+     */
+    vector<TreeNode*> generateTrees2(int n) {
+        vector<vector<TreeNode*>> dp(n+1, vector<TreeNode*>());
+        dp[0].push_back(nullptr);
+        for(int len = 1; len <= n; len++) {
+            vector<TreeNode*>& trees = dp[len];
+            for(int i = 1; i <= len; i++) {
+                vector<TreeNode*> leftTrees = dp[i-1];
+                vector<TreeNode*> rightTrees = dp[len-i];
+                for(auto left: leftTrees) {
+                    for(auto right: rightTrees) {
+                        TreeNode* root = new TreeNode(i);
+                        root->left = left;
+                        root->right = clone(right, i);
+                        trees.push_back(root);
+                    }
+                }
+            }
+        }
+        return dp[n];
+    }
+    static TreeNode* clone(TreeNode* root, int offset) {
+        if(!root) {
+            return nullptr;
+        }
+        TreeNode* node = new TreeNode(root->val + offset);
+        node->left = clone(root->left, offset);
+        node->right = clone(root->right, offset);
+        return node;
+    }
+
 };
 
 int main()
@@ -60,7 +105,7 @@ int main()
 
     // case 1
     n = 3;
-    results = obj.generateTrees(n);
+    results = obj.generateTrees2(n);
     for(auto node: results) {
         print_tree(node);
     }
