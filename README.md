@@ -27,6 +27,7 @@ one by one.
 |96|[Leetcode 96 Unique Binary Search Trees](https://leetcode-cn.com/problems/unique-binary-search-trees/)|[solution](./tree/leetcode96.cpp)|dynamic programming|
 |98|[Leetcode 98 Validate Binary Search Tree](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[solution](./tree/leetcode98.cpp)||
 |112|[Leetcode 112 Path Sum](https://leetcode-cn.com/problems/path-sum/)|[solution](./tree/leetcode112.cpp)|postorder traversal|
+|120|[Leetcode 120 Triangle](https://leetcode-cn.com/problems/triangle/)|[solution](./array/leetcode120.cpp)|dynamic programming|
 |121|[Leetcode 121 Best Time to Buy and Sell Stock](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|[solution](./array/leetcode121.cpp)||
 |206|[Leetcode 206 Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[solution](./linkedlist/leetcode206.cpp)||
 |209|[Leetcode 209 Minimum Size Subarray Sum](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)|[solution](./array/leetcode209.cpp)|sliding window|
