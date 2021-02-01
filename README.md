@@ -29,6 +29,7 @@ one by one.
 |112|[Leetcode 112 Path Sum](https://leetcode-cn.com/problems/path-sum/)|[solution](./tree/leetcode112.cpp)|postorder traversal|
 |120|[Leetcode 120 Triangle](https://leetcode-cn.com/problems/triangle/)|[solution](./array/leetcode120.cpp)|dynamic programming|
 |121|[Leetcode 121 Best Time to Buy and Sell Stock](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|[solution](./array/leetcode121.cpp)||
+|135|[Leetcode 135 Candy](https://leetcode-cn.com/problems/candy/)|[solution](./array/leetcode135.cpp)|greedy algorithm|
 |206|[Leetcode 206 Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[solution](./linkedlist/leetcode206.cpp)||
 |209|[Leetcode 209 Minimum Size Subarray Sum](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)|[solution](./array/leetcode209.cpp)|sliding window|
 |215|[Leetcode 215 Kth Largest Element in An Array](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)|[solution](./array/sort/leetcode215.cpp)||
