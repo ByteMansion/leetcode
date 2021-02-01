@@ -36,6 +36,7 @@ one by one.
 |350|[Leetcode 350 Intersection of Two Arrays II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)|[solution](./array/leetcode350.cpp)||
 |392|[Leetcode 392 Is Subsequence](https://leetcode.com/problems/is-subsequence/)|[solution](./string/leetcode392.cpp)||
 |409|[Leetcode 409 Longest Palindrom](https://leetcode-cn.com/problems/longest-palindrome/)|[solution](./string/leetcode409.cpp)||
+|455|[Leetcode 455 Assign Cookies](https://leetcode-cn.com/problems/assign-cookies/)|[solution](./array/leetcode455.cpp)|greedy algorithm|
 |538|[Leetcode 538 Convert BST to Greater Tree](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)|[solution](./tree/leetcode538.cpp)||
 |572|[Leetcode 572 Subtree of Another Tree](https://leetcode-cn.com/problems/subtree-of-another-tree/)|[solution](./tree/leetcode572.cpp)||
 |718|[Leetcode 718 Maximum Length of Repeated Subarray](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|[solution](./array/leetcode718.cpp)|dynamic programming|
