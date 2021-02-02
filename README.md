@@ -38,6 +38,7 @@ one by one.
 |392|[Leetcode 392 Is Subsequence](https://leetcode.com/problems/is-subsequence/)|[solution](./string/leetcode392.cpp)||
 |409|[Leetcode 409 Longest Palindrom](https://leetcode-cn.com/problems/longest-palindrome/)|[solution](./string/leetcode409.cpp)||
 |435|[Leetcode 435 Non-overlapping Intervals](https://leetcode-cn.com/problems/non-overlapping-intervals/)|[solution](./array/leetcode435.cpp)|greedy algorithm|
+|452|[Leetcode 452 Minimum Number of Arrows to Burst Balloons](https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/)|[solution](./array/leetcode452.cpp)|greedy algorithm|
 |455|[Leetcode 455 Assign Cookies](https://leetcode-cn.com/problems/assign-cookies/)|[solution](./array/leetcode455.cpp)|greedy algorithm|
 |538|[Leetcode 538 Convert BST to Greater Tree](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)|[solution](./tree/leetcode538.cpp)||
 |572|[Leetcode 572 Subtree of Another Tree](https://leetcode-cn.com/problems/subtree-of-another-tree/)|[solution](./tree/leetcode572.cpp)||
