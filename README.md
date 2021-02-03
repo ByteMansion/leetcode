@@ -44,6 +44,7 @@ one by one.
 |572|[Leetcode 572 Subtree of Another Tree](https://leetcode-cn.com/problems/subtree-of-another-tree/)|[solution](./tree/leetcode572.cpp)||
 |718|[Leetcode 718 Maximum Length of Repeated Subarray](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|[solution](./array/leetcode718.cpp)|dynamic programming|
 |746|[Leetcode 746 Min Cost Climbing Stirs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[solution](./array/leetcode746.cpp)|dynamic programming|
+|763|[Leetcode 763 Pertition Labels](https://leetcode-cn.com/problems/partition-labels/)|[solution](./string/leetcode763.cpp)|greedy algorithm|
 |792|[Leetcode 792 Number of Matching Subsequences](https://leetcode.com/problems/number-of-matching-subsequences/)|[solution](./string/leetcode792.cpp)||
 |875|[Leetcode 875 Koko Eating Bananas](https://leetcode-cn.com/problems/koko-eating-bananas/)|[solution](./array/leetcode875.cpp)|binary search|
 |992|[Leetcode 992 Subarrays with K Different Integers](https://leetcode-cn.com/problems/subarrays-with-k-different-integers/)|[solution](./array/leetcode992.cpp)|sliding window|
