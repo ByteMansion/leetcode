@@ -11,6 +11,9 @@ one by one.
 |*|HUAWEI 笔试 十六进制转换为十进制|[solution](./array/sort/huawei2.cpp)||
 |*|HUAWEI 笔试 饮料瓶|[solution](./number/huawei4.cpp)||
 |*|HUAWEI 笔试 最少交换次数|[solution](./array/sort/huawei3.cpp)||
+|*|HUAWEI 笔试 免单统计|[solution](./string/huawei5.cpp)||
+|*|HUAWEI 笔试 字符串分隔|[solution](./string/huawei6.cpp)||
+|*|HUAWEI 笔试 句子逆序|[solution](./string/huawei7.cpp)||
 |2|[Leetcode 2 Add Two Numbers](https://leetcode-cn.com/problems/add-two-numbers/)|[solution](./linkedlist/leetcode2.cpp)||
 |3|[Leetcode 3 Longest Substring Without Repeating Characters](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)|[solution](./string/leetcode3.cpp)|sliding window|
 |5|[Leetcode 5 Longest Palindrom Substring](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[solution](./string/leetcode5.cpp)||

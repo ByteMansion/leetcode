@@ -8,7 +8,7 @@
  * 注：测试用例保证输入参数的正确性，答题者无需验证。测试用例不止一组。
  * 当没有新的输入时，说明输入结束。
  */
-
+#if 0
 #include <vector>
 #include <iostream>
 #include <algorithm>
@@ -44,5 +44,30 @@ int main()
     for(auto num: result) {
         cout << num << endl;
     }
+    return 0;
+}
+#endif
+/**
+ * @brief Better solution: use set
+ * 
+ */
+#include <set>
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+    int n;
+    set<int> nums;
+    while(cin >> n) {
+        nums.insert(n);
+    }
+
+    for(auto num: nums) {
+        cout << num << endl;
+    }
+    
     return 0;
 }
