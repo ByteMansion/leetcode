@@ -39,6 +39,7 @@ one by one.
 |209|[Leetcode 209 Minimum Size Subarray Sum](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)|[solution](./array/leetcode209.cpp)|sliding window|
 |215|[Leetcode 215 Kth Largest Element in An Array](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)|[solution](./array/sort/leetcode215.cpp)||
 |322|[Leetcode 322 Coin Change](https://leetcode-cn.com/problems/coin-change/)|[solution](./array/leetcode322.cpp)||
+|347|[Leetcode 347 Top K Frequent Elements](https://leetcode-cn.com/problems/top-k-frequent-elements/)|[solution](./array/leetcode347.cpp)||
 |350|[Leetcode 350 Intersection of Two Arrays II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)|[solution](./array/leetcode350.cpp)||
 |392|[Leetcode 392 Is Subsequence](https://leetcode.com/problems/is-subsequence/)|[solution](./string/leetcode392.cpp)||
 |409|[Leetcode 409 Longest Palindrom](https://leetcode-cn.com/problems/longest-palindrome/)|[solution](./string/leetcode409.cpp)||
