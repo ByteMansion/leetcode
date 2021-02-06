@@ -45,7 +45,7 @@ private:
         if(lIdx >= rIdx) {
             return;
         }
-        int pivot = (rIdx - lIdx) / 2 + lIdx;
+        int pivot = rand() % (rIdx - lIdx + 1) + lIdx;
         swap(arr[pivot], arr[rIdx]);
         int pos = partition(arr, lIdx, rIdx);
 
