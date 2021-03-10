@@ -35,10 +35,12 @@ one by one.
 |120|[Leetcode 120 Triangle](https://leetcode-cn.com/problems/triangle/)|[solution](./array/leetcode120.cpp)|dynamic programming|
 |121|[Leetcode 121 Best Time to Buy and Sell Stock](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|[solution](./array/leetcode121.cpp)||
 |135|[Leetcode 135 Candy](https://leetcode-cn.com/problems/candy/)|[solution](./array/leetcode135.cpp)|greedy algorithm|
+|148|[Leetcode 148 Sort List](https://leetcode-cn.com/problems/sort-list/)|[solution](./linkedlist/leetcode148.cpp)||
 |206|[Leetcode 206 Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[solution](./linkedlist/leetcode206.cpp)||
 |209|[Leetcode 209 Minimum Size Subarray Sum](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)|[solution](./array/leetcode209.cpp)|sliding window|
 |215|[Leetcode 215 Kth Largest Element in An Array](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)|[solution](./array/sort/leetcode215.cpp)||
 |235|[Leetcode 235 Lowest Common Ancestor of a Binary Search Tree](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)|[solution](./tree/leetcode235.cpp)||
+|315|[Leetcode 315 Count of Smaller Numbers After Self](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)|[solution](./array/leetcode315.cpp)||
 |322|[Leetcode 322 Coin Change](https://leetcode-cn.com/problems/coin-change/)|[solution](./array/leetcode322.cpp)||
 |347|[Leetcode 347 Top K Frequent Elements](https://leetcode-cn.com/problems/top-k-frequent-elements/)|[solution](./array/leetcode347.cpp)||
 |350|[Leetcode 350 Intersection of Two Arrays II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)|[solution](./array/leetcode350.cpp)||
