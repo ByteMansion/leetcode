@@ -7,6 +7,7 @@ one by one.
 |No.|Leetcode Problems|Solutions|Related Knowledge|
 |-|-|-|-|
 |*|[Offer 45 把数组排成最小的数](https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)|[solution](./string/offer45.cpp)||
+|*|[Offer 51 数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)|[solution](./array/offer51.cpp)||
 |*|[Mianshi 17 Smallest K LCCI](https://leetcode-cn.com/problems/smallest-k-lcci/)|[solution](./array/sort/mianshi17.cpp)||
 |*|HUAWEI 机试 随机数去重和排序|[solution](./array/sort/huawei1.cpp)||
 |*|HUAWEI 机试 十六进制转换为十进制|[solution](./array/sort/huawei2.cpp)||
