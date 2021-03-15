@@ -45,84 +45,36 @@ public:
         } else if(l2 == nullptr) {
             return l1;
         }
-        ListNode* n1 = l1;
-        ListNode* n2 = l2;
-        ListNode* head = nullptr;
-        ListNode* iNode = nullptr;
+        ListNode* pHead = new ListNode(-1);
+        ListNode* node = pHead;
+        int v1, v2;
         int carry = 0;
-        while(n1 && n2) {
-            int sum = n1->val + n2->val + carry;
-            carry = sum / 10;
-            sum = sum % 10;
-            ListNode* node = new ListNode(sum);
-            if(head == nullptr) {
-                head = node;
+        while(l1 || l2) {
+            if(l1) {
+                v1 = l1->val;
+                l1 = l1->next;
             } else {
-                iNode->next = node;
+                v1 = 0;
             }
-            iNode = node;
-            n1 = n1->next;
-            n2 = n2->next;
-        }
-        if(n1) {
-            while(n1) {
-                int sum = carry + n1->val;
-                carry = sum / 10;
-                sum = sum % 10;
-                ListNode* node = new ListNode(sum);
-                iNode->next = node;
-                iNode = node;
-                n1 = n1->next;
+            if(l2) {
+                v2 = l2->val;
+                l2 = l2->next;
+            } else {
+                v2 = 0;
             }
-        } else if(n2) {
-            while(n2) {
-                int sum = carry + n2->val;
-                carry = sum / 10;
-                sum = sum % 10;
-                ListNode* node = new ListNode(sum);
-                iNode->next = node;
-                iNode = node;
-                n2 = n2->next;
-            }
+            int sum = v1 + v2 + carry;
+            int digit = sum % 10;
+            carry = sum / 10;
+            node->next = new ListNode(digit);
+            node = node->next;
         }
         if(carry) {
-            iNode->next = new ListNode(carry);
+            node->next = new ListNode(carry);
         }
-        return head;
+        node = pHead->next;
+        delete pHead;
+        return node;
     }
-	/**
-	 @brief	Simplify above code
-	 */
-	ListNode* addTwoNumbers2(ListNode* l1, ListNode* l2) {
-		if (l1 == nullptr) {
-			return l2;
-		} else if (l2 == nullptr) {
-			return l1;
-		}
-		int carry = 0;
-		ListNode* head = new ListNode(-1);
-		ListNode* iNode = head;
-		while(l1 || l2) {
-			int sum = 0;
-			if (l1) {
-				sum += l1->val;
-				l1 = l1->next;
-			}
-			if (l2) {
-				sum += l2->val;
-				l2 = l2->next;
-			}
-			sum += carry;
-			carry = sum / 10;
-			sum %= 10;
-			iNode->next = new ListNode(sum);
-			iNode = iNode->next;
-		}
-		if(carry) {
-			iNode->next = new ListNode(carry);
-		}
-		return head->next;
-	}
 };
 int main()
 {
