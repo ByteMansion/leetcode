@@ -44,6 +44,10 @@ public:
         vector<int> tmp(n);
         return mergeSort(nums, tmp, 0, n - 1);
     }
+    /**
+     * solution 2: 离散化树状数组
+     * 
+     */
 };
 
 int main()
