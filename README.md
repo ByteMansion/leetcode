@@ -1,22 +1,22 @@
 # Solutions to Leetcode Problems
-This repo aims at documenting solutions to Leetcode problems or related algorithms.
+This repo is aimed at documenting solutions to Leetcode problems or related algorithms.
 Another repo also includes hundreds of solutions, but it is a large projects and not
-convenient to look up a certain solution. Therefore, I created this repo to split solutions 
-one by one.
+convenient to look up a certain solution.
 
 |No.|Leetcode Problems|Solutions|Related Knowledge|
 |-|-|-|-|
 |*|[Offer 45 把数组排成最小的数](https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)|[solution](./string/offer45.cpp)||
 |*|[Offer 51 数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)|[solution](./array/offer51.cpp)||
 |*|[Mianshi 17 Smallest K LCCI](https://leetcode-cn.com/problems/smallest-k-lcci/)|[solution](./array/sort/mianshi17.cpp)||
-|*|HUAWEI 机试 随机数去重和排序|[solution](./array/sort/huawei1.cpp)||
-|*|HUAWEI 机试 十六进制转换为十进制|[solution](./array/sort/huawei2.cpp)||
-|*|HUAWEI 机试 饮料瓶|[solution](./number/huawei4.cpp)||
-|*|HUAWEI 机试 最少交换次数|[solution](./array/sort/huawei3.cpp)||
-|*|HUAWEI 机试 免单统计|[solution](./string/huawei5.cpp)||
-|*|HUAWEI 机试 字符串分隔|[solution](./string/huawei6.cpp)||
-|*|HUAWEI 机试 句子逆序|[solution](./string/huawei7.cpp)||
-|*|HUAWEI 机试 最大时间|[solution](./string/huawei8.cpp)||
+|*|HUAWEI 机试 随机数去重和排序|[solution](./interview/huawei1.cpp)||
+|*|HUAWEI 机试 十六进制转换为十进制|[solution](./interview/huawei2.cpp)||
+|*|HUAWEI 机试 饮料瓶|[solution](./interview/huawei4.cpp)||
+|*|HUAWEI 机试 最少交换次数|[solution](./interview/huawei3.cpp)||
+|*|HUAWEI 机试 免单统计|[solution](./interview/huawei5.cpp)||
+|*|HUAWEI 机试 字符串分隔|[solution](./interview/huawei6.cpp)||
+|*|HUAWEI 机试 句子逆序|[solution](./interview/huawei7.cpp)||
+|*|HUAWEI 机试 最大时间|[solution](./interview/huawei8.cpp)||
+|*|eBay 机试 Zigzag Sort & Type ID|[solution](./interview/eBay.cpp)||
 |2|[Leetcode 2 Add Two Numbers](https://leetcode-cn.com/problems/add-two-numbers/)|[solution](./linkedlist/leetcode2.cpp)||
 |3|[Leetcode 3 Longest Substring Without Repeating Characters](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)|[solution](./string/leetcode3.cpp)|sliding window|
 |5|[Leetcode 5 Longest Palindrom Substring](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[solution](./string/leetcode5.cpp)||
