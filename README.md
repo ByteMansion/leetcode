@@ -1,8 +1,23 @@
 # Solutions to Leetcode Problems
-This repo is aimed at documenting solutions to Leetcode problems or related algorithms.
+This repo is aimed at documenting solutions to Leetcode problems or online tests in interview.
 Another repo also includes hundreds of solutions, but it is a large projects and not
 convenient to look up a certain solution.
 
+## Prerequisite
+This project provides an easy way to compile all source files. A new folder `bin` is created in compilation and the executables are all placed into this folder.
+If you want to use this easy way, your environment must have `CMake` tool. Compilation is dependant on [this tool](https://cmake.org/).
+
+## How to build this project?
+Execute `build.sh` script:
+```bash
+$ ./build.sh
+```
+If `CMake` isn't installed, you must compile the source code one by one using `g++`. Standard `C++17` is recommended. For example:
+```bash
+$ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
+``` 
+
+## Quick Access
 |No.|Leetcode Problems|Solutions|Related Knowledge|
 |-|-|-|-|
 |*|[Offer 45 把数组排成最小的数](https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)|[solution](./string/offer45.cpp)||
