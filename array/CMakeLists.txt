@@ -1,0 +1,30 @@
+# using c++11
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# set project name
+project(array)
+
+add_subdirectory(permutation)
+add_subdirectory(sort)
+
+add_executable(leetcode53 leetcode53.cpp)
+add_executable(leetcode64 leetcode64.cpp)
+add_executable(leetcode79 leetcode79.cpp)
+add_executable(leetcode120 leetcode120.cpp)
+add_executable(leetcode121 leetcode121.cpp)
+add_executable(leetcode135 leetcode135)
+add_executable(leetcode209 leetcode209.cpp)
+add_executable(leetcode315 leetcode315.cpp)
+add_executable(leetcode322 leetcode322.cpp)
+add_executable(leetcode347 leetcode347.cpp)
+add_executable(leetcode350 leetcode350.cpp)
+add_executable(leetcode406 leetcode406.cpp)
+add_executable(leetcode435 leetcode435.cpp)
+add_executable(leetcode452 leetcode452.cpp)
+add_executable(leetcode455 leetcode455.cpp)
+add_executable(leetcode718 leetcode718.cpp)
+add_executable(leetcode746 leetcode746.cpp)
+add_executable(leetcode875 leetcode875.cpp)
+add_executable(leetcode992 leetcode992.cpp)
+add_executable(offer51 offer51.cpp)
