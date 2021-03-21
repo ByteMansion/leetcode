@@ -1,0 +1,9 @@
+
+add_executable(leetcode95 leetcode95.cpp)
+add_executable(leetcode96 leetcode96.cpp)
+add_executable(leetcode98 leetcode98.cpp)
+add_executable(leetcode112 leetcode112.cpp)
+add_executable(leetcode235 leetcode235.cpp)
+add_executable(leetcode0408 leetcode0408.cpp)
+add_executable(leetcode538 leetcode538.cpp)
+add_executable(leetcode572 leetcode572.cpp)

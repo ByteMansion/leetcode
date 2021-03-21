@@ -92,7 +92,7 @@ int main()
     in2 = {5, 6, 4};
     l2 = create_linkedlist(in2);
     print_linkedlist(l2);
-    out = obj.addTwoNumbers2(l1, l2);
+    out = obj.addTwoNumbers(l1, l2);
     print_linkedlist(out);
 
     // case 2
@@ -102,7 +102,7 @@ int main()
     in2 = {9, 9, 9, 9};
     l2 = create_linkedlist(in2);
     print_linkedlist(l2);
-    out = obj.addTwoNumbers2(l1, l2);
+    out = obj.addTwoNumbers(l1, l2);
     print_linkedlist(out);
 
     return 0;
