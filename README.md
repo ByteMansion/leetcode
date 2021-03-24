@@ -77,6 +77,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |455|[Leetcode 455 Assign Cookies](https://leetcode-cn.com/problems/assign-cookies/)|[solution](./array/leetcode455.cpp)|greedy algorithm|
 |538|[Leetcode 538 Convert BST to Greater Tree](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)|[solution](./tree/leetcode538.cpp)||
 |572|[Leetcode 572 Subtree of Another Tree](https://leetcode-cn.com/problems/subtree-of-another-tree/)|[solution](./tree/leetcode572.cpp)||
+|605|[Leetcode 605 Can Place Flowers](https://leetcode-cn.com/problems/can-place-flowers/)|[solution](./array/leetcode605.cpp)|greedy method|
 |718|[Leetcode 718 Maximum Length of Repeated Subarray](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|[solution](./array/leetcode718.cpp)|dynamic programming|
 |746|[Leetcode 746 Min Cost Climbing Stirs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[solution](./array/leetcode746.cpp)|dynamic programming|
 |763|[Leetcode 763 Pertition Labels](https://leetcode-cn.com/problems/partition-labels/)|[solution](./string/leetcode763.cpp)|greedy algorithm|
