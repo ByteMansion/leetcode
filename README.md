@@ -48,6 +48,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |47|[Leetcode 47 Permutations II](https://leetcode.com/problems/permutations-ii/)|[solution](./array/permutation/leetcode47.cpp)||
 |53|[Leetcode 53 Maximum Subarray](https://leetcode-cn.com/problems/maximum-subarray/)|[solution](./array/leetcode53.cpp)|dynamic programming|
 |64|[Leetcode 64 Minimum Path Sum](https://leetcode-cn.com/problems/minimum-path-sum/)|[solution](./array/leetcode64.cpp)|dynamic programming|
+|65|[Leetcode 65 Valid Number](https://leetcode-cn.com/problems/valid-number/)|[solution](./string/leetcode65.cpp)|DFA, Deterministic Finite Automation|
 |70|[Leetcode 70 Climbing Stirs](https://leetcode.com/problems/climbing-stairs/)|[solution](./number/leetcode70.cpp)|dynamic programming|
 |76|[Leetcode 76 Minimum Window Substring](https://leetcode-cn.com/problems/minimum-window-substring/)|[solution](./string/leetcode76.cpp)||
 |79|[Leetcode 79 Word Search](https://leetcode-cn.com/problems/word-search/)|[solution](./array/leetcode79.cpp)||
