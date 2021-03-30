@@ -40,6 +40,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |*|HUAWEI 机试 句子逆序|[solution](./interview/huawei7.cpp)||
 |*|HUAWEI 机试 最大时间|[solution](./interview/huawei8.cpp)||
 |*|eBay 机试 Zigzag Sort & Type ID|[solution](./interview/eBay.cpp)||
+|*|商汤科技 机试 两个链表的第一个公共节点|[solution](./interview/shangtang.cpp)||
 |2|[Leetcode 2 Add Two Numbers](https://leetcode-cn.com/problems/add-two-numbers/)|[solution](./linkedlist/leetcode2.cpp)|reverse linked list|
 |3|[Leetcode 3 Longest Substring Without Repeating Characters](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)|[solution](./string/leetcode3.cpp)|sliding window|
 |5|[Leetcode 5 Longest Palindrom Substring](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[solution](./string/leetcode5.cpp)|dynamic programming|
