@@ -44,6 +44,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |2|[Leetcode 2 Add Two Numbers](https://leetcode-cn.com/problems/add-two-numbers/)|[solution](./linkedlist/leetcode2.cpp)|reverse linked list|
 |3|[Leetcode 3 Longest Substring Without Repeating Characters](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)|[solution](./string/leetcode3.cpp)|sliding window|
 |5|[Leetcode 5 Longest Palindrom Substring](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[solution](./string/leetcode5.cpp)|dynamic programming|
+|8|[Leetcode 8 Atoi](https://leetcode-cn.com/problems/string-to-integer-atoi/)|[solution](./string/leetcode8.cpp)|DFA, Deterministic Finite Automation|
 |31|[Leetcode 31 nextPermutation](https://leetcode.com/problems/next-permutation/)|[solution](./array/permutation/leetcode31.cpp)||
 |46|[Leetcode 46 Permutations](https://leetcode.com/problems/permutations/)|[solution](./array/permutation/leetcode46.cpp)||
 |47|[Leetcode 47 Permutations II](https://leetcode.com/problems/permutations-ii/)|[solution](./array/permutation/leetcode47.cpp)||
