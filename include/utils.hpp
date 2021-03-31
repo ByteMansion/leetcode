@@ -39,7 +39,8 @@ void print_linkedlist(ListNode* node)
     cout << endl;
 }
 
-void print_array(const vector<int>& array)
+template <typename T>
+void print_array(const vector<T>& array)
 {
     if(array.empty() || array.size() <= 0) {
         cout << "[This array is empty!]" << endl;
@@ -53,7 +54,8 @@ void print_array(const vector<int>& array)
     cout << endl;
 }
 
-void print_2d_array(const vector<vector<int>>& array)
+template <typename T>
+void print_2d_array(const vector<vector<T>>& array)
 {
     if(array.empty()) {
         cout << "Empty 2D array!" << endl;
