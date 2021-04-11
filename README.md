@@ -6,24 +6,33 @@ Another repo also includes hundreds of solutions, but it is a large projects and
 convenient to find a specific solution.
 
 ## Prerequisite
-This project provides an easy way to compile all source files. A new folder `bin` is created in compilation and the executables are all placed into this folder.
-If you want to use this easy way, your environment must have `CMake` tool. Compilation is dependant on [this tool](https://cmake.org/).
+This project provides an easy way to compile all source files: `CMake`. After compilation, a new folder `bin` is created and all executables are saved under this folder.
+
+Therefore, the prerequisite of this repo is: compilation is dependant on [CMake](https://cmake.org/).
+
+Of course, this prerequisite is recommended, instead of necessary. [Compilation](#compilation) will give another trivial way to compile a source file.
 
 ## Knowledge Base
-This part provides some brief introduction to typical data structures and algorithms.
+This part provides some brief introduction to typical data structures and classical algorithms.
 
 1. [Dynamic Programming](./knowledge/Dynamic_Programming.md)
 
 
 ## Compilation
+### Compile All
+
 Execute `build.sh` script:
+
 ```bash
 $ ./build.sh
 ```
+### Compile One
+
 If `CMake` isn't installed, you must compile the source code one by one using `g++`. Standard `C++17` is recommended. For example:
+
 ```bash
 $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
-``` 
+```
 
 ## Quick Access
 |No.|Leetcode Problems|Solutions|Related Knowledge|
