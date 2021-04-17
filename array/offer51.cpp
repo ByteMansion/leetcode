@@ -4,10 +4,35 @@
  */
 #include "../include/utils.hpp"
 
+class BIT {
+private:
+    vector<int> tree;
+    int n;
+
+public:
+    BIT(int _n): n(_n), tree(_n+1) {}
+    static int lowbit(int x) {
+        return x & (-x);
+    }
+    int query(int x) {
+        int ret = 0;
+        while(x) {
+            ret += tree[x];
+            x -= lowbit(x);
+        }
+        return ret;
+    }
+    void update(int x) {
+        while(x <= n) {
+            ++tree[x];
+            x += lowbit(x);
+        }
+    }
+};
 class Solution {
 public:
     /**
-     * solution 1: merge sort
+     * 1st solution: merge sort
      * 
      */
 private:
@@ -22,7 +47,6 @@ private:
         while (i <= mid && j <= r) {
             if (nums[i] <= nums[j]) {
                 tmp[pos++] = nums[i++];
-                // inv_count += (j - (mid + 1));
             } else {
                 tmp[pos++] = nums[j++];
                 inv_count += mid - i + 1;
@@ -30,7 +54,6 @@ private:
         }
         while(i <= mid) {
             tmp[pos++] = nums[i++];
-            // inv_count += (j - (mid + 1));
         }
         while(j <= r) {
             tmp[pos++] = nums[j++];
@@ -45,9 +68,26 @@ public:
         return mergeSort(nums, tmp, 0, n - 1);
     }
     /**
-     * solution 2: 离散化树状数组
+     * 2nd solution: 离散化树状数组
      * 
      */
+    int reversePairs2(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> tmp = nums;
+        sort(tmp.begin(), tmp.end());
+        for(auto& num: nums) {
+            // the position of number in sorted array
+            num = lower_bound(tmp.begin(), tmp.end(), num) - tmp.begin() + 1;
+        }
+        // 树状数组统计逆序对
+        BIT bit(n);
+        int ans = 0;
+        for(int i = n-1; i >= 0; --i) {
+            ans += bit.query(nums[i] - 1);
+            bit.update(nums[i]);
+        }
+        return ans;
+    }
 };
 
 int main()
@@ -59,12 +99,12 @@ int main()
     // case 1: result should be 5
     nums = {7, 5, 6, 4};
     print_array(nums);
-    cout << obj.reversePairs(nums) << endl;
+    cout << obj.reversePairs2(nums) << endl;
 
     // case 2: result should be 8
     nums = {7, 5, 6, 2, 4};
     print_array(nums);
-    cout << obj.reversePairs(nums) << endl; 
+    cout << obj.reversePairs2(nums) << endl; 
 
     // case 3: result should be 238952
     nums = {12,2,1,17,19,10,5,23,7,20,10,17,22,15,9,18,12,12,16,16,17,8,11,19,2,21,5,19,22,9,17,24,8,8,16,5,2,25,1,0,
@@ -90,7 +130,7 @@ int main()
     0,6,3,21,2,7,2,22,7,5,8,17,14,17,8,18,21,22,14,8,15,2,10,24,0,10,23,11,16,22,5,5,19,20,14,2,19,3,25,5,10,14,22,3,
     5,10,20,22,16,17,22,15,23,10,0,21,17,20,3,15,0,13,17,2,10,20,8,24,5,6,19,9,4,25,11,19,10,3,24,0,10,10,9,21,16,25,
     6,20,11,7,17,20,10,9,22,19,21,7,0,4,11,1,9,18,18,3,1,25,5,1,20,13,2,7,19,10,13,25,3,23,13,5,10,15,11,15,22,9,10,8,18,0};
-    cout << obj.reversePairs(nums) << endl;
+    cout << obj.reversePairs2(nums) << endl;
 
 
     return 0;
