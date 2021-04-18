@@ -66,6 +66,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |76|[Leetcode 76 Minimum Window Substring](https://leetcode-cn.com/problems/minimum-window-substring/)|[solution](./string/leetcode76.cpp)||
 |79|[Leetcode 79 Word Search](https://leetcode-cn.com/problems/word-search/)|[solution](./array/leetcode79.cpp)||
 |92|[Leetcode 92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[solution](./linkedlist/leetcode92.cpp)||
+|94|[Leetcode 94 Binary Tree Inorder Traversal](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)|[solution](./tree/leetcode94.cpp)|**inorder traversal**|
 |95|[Leetcode 95 Unique Binary Search Trees II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/)|[solution](./tree/leetcode95.cpp)|recursive method|
 |96|[Leetcode 96 Unique Binary Search Trees](https://leetcode-cn.com/problems/unique-binary-search-trees/)|[solution](./tree/leetcode96.cpp)|dynamic programming|
 |98|[Leetcode 98 Validate Binary Search Tree](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[solution](./tree/leetcode98.cpp)|inorder traversal|
