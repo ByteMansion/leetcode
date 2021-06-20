@@ -1,7 +1,7 @@
 [toc]
 
 # Solutions to Leetcode Problems
-This repo is aimed at documenting solutions to Leetcode problems or online tests in interview.
+This repo is aimed at documenting solutions to Leetcode problems or online judge problems in interview.
 Another repo also includes hundreds of solutions, but it is a large projects and not
 convenient to find a specific solution.
 
@@ -13,7 +13,7 @@ Therefore, the prerequisite of this repo is: compilation is dependant on [CMake]
 Of course, this prerequisite is recommended, instead of necessary. [Compilation](#compilation) will give another trivial way to compile a source file.
 
 ## Knowledge Base
-This part provides some brief introduction to typical data structures and classical algorithms.
+This part provides some brief introductions to typical data structures and classical algorithms.
 
 1. [Dynamic Programming](./knowledge/Dynamic_Programming.md)
 2. 树状数组（ToDo）

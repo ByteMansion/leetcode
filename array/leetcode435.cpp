@@ -17,6 +17,10 @@ public:
         sort(intervals.begin(), intervals.end(),
              [](auto& s1, auto& s2) { return s1[1] < s2[1]; });
 
+        #if 0
+        print_2d_array(intervals);
+        #endif
+
         int j = 0;
         for(int i = 1; i < intervals.size(); i++) {
             if(intervals[i][0] < intervals[j][1]) {

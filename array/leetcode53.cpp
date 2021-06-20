@@ -13,6 +13,12 @@ using namespace std;
 
 class Solution {
 public:
+    /**
+     * @brief 1st solution: Dynamic Programming
+     * 
+     * @param nums 
+     * @return int 
+     */
     int maxSubArray(vector<int>& nums) {
         int maxSum = INT_MIN;
         int curSum = 0;
@@ -26,6 +32,56 @@ public:
             }
         }
         return maxSum;
+    }
+
+    /**
+     * @brief 2nd solution: Divide and Conquer
+     * 
+     * @param nums 
+     * @return int 
+     */
+    int maxSubArray2(vector<int> &nums)
+    {
+        int n = nums.size();
+        return maxSubArrayHelper(nums, 0, n - 1);
+    }
+
+private:
+    int maxSubArrayHelper(vector<int> &nums, int lIdx, int rIdx)
+    {
+        if (lIdx == rIdx)
+        {
+            return nums[lIdx];
+        }
+        int mIdx = lIdx + (rIdx - lIdx) / 2;
+        int maxLeftSum = maxSubArrayHelper(nums, lIdx, mIdx);
+        int maxRightSum = maxSubArrayHelper(nums, mIdx + 1, rIdx);
+        int maxAcrossSum = maxAcrossSubArray(nums, lIdx, mIdx, rIdx);
+        return max(maxAcrossSum, max(maxLeftSum, maxRightSum));
+    }
+    int maxAcrossSubArray(vector<int> &nums, int lIdx, int mIdx, int rIdx)
+    {
+        int sum = nums[mIdx];
+        int lLargest = sum;
+        for (int i = mIdx - 1; i >= lIdx; i--)
+        {
+            sum += nums[i];
+            if (lLargest < sum)
+            {
+                lLargest = sum;
+            }
+        }
+        sum = nums[mIdx + 1];
+        int rLargest = sum;
+        for (int i = mIdx + 2; i <= rIdx; i++)
+        {
+            sum += nums[i];
+            if (rLargest < sum)
+            {
+                rLargest = sum;
+            }
+        }
+        return max(lLargest + rLargest, max(lLargest, rLargest));
     }
 };
 
