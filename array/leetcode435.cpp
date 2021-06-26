@@ -21,13 +21,13 @@ public:
         print_2d_array(intervals);
         #endif
 
-        int j = 0;
+        int prev = intervals[0][1];
         for(int i = 1; i < intervals.size(); i++) {
-            if(intervals[i][0] < intervals[j][1]) {
+            if(intervals[i][0] < prev) {
                 result++;
-                continue;
+            } else {
+                prev = intervals[i][1];
             }
-            j = i;
         }
         return result;
     }
