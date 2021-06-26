@@ -73,6 +73,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |112|[Leetcode 112 Path Sum](https://leetcode-cn.com/problems/path-sum/)|[solution](./tree/leetcode112.cpp)|postorder traversal|
 |120|[Leetcode 120 Triangle](https://leetcode-cn.com/problems/triangle/)|[solution](./array/leetcode120.cpp)|dynamic programming|
 |121|[Leetcode 121 Best Time to Buy and Sell Stock](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|[solution](./array/leetcode121.cpp)||
+|122|[Leetcode 122 Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[solution](./array/leetcode122.cpp)|greedy method|
 |135|[Leetcode 135 Candy](https://leetcode-cn.com/problems/candy/)|[solution](./array/leetcode135.cpp)|greedy algorithm|
 |144|[Leetcode 144 Binary Tree Preorder Traversal](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)|[solution](./tree/leetcode144.cpp)|**preorder traversal**|
 |l45|[Leetcode 145 Binary Tree Postorder Traversal](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)|[solution](./tree/leetcode145.cpp)|**postorder traversal**|
