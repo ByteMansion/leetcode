@@ -17,7 +17,7 @@ class Solution
 {
 public:
     /**
-     * @brief   Greedy Method
+     * @brief   greedy method
      * 
      * @param prices 
      * @return int 

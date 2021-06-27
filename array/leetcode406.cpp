@@ -11,20 +11,32 @@ using namespace std;
 class Solution {
 public:
     /**
-     * solution 1: sort with multiple keys
-     *  Height in ascending order
-     *  Taller people count in descending order
+     * @brief   sort and insert
      * 
+     * @param people 
+     * @return vector<vector<int> > 
      */
-    vector<vector<int> > reconstructQueue(vector<vector<int> >& people) {     
+    vector<vector<int> > reconstructQueue(vector<vector<int> >& people) {
+        /**
+         * @brief 
+         * 1st sort: height
+         * 2nd sort: count of taller people
+         * Because people with equal height counts, 2nd sort matters.
+         * e.g.
+         * people = {{7,0}, {4,4}, {7,1}, {5,0}, {6,1}, {5,2}}
+         * after sort:
+         * people = {{4,4}, {5,2}, {5,0}, {6,1}, {7,1}, {7,0}}
+         */
         sort(people.begin(), people.end(),
-             [](auto& p1, auto& p2) { return p1[0] < p2[0] || (p1[0] == p2[0] && p1[1] > p2[1]);} );
+             [](auto& p1, auto& p2) { return p1[0] < p2[0] || \
+             (p1[0] == p2[0] && p1[1] > p2[1]);} );
 
         int n = people.size();
         vector<vector<int>> results(n);
         for(auto& individual: people) {
             int idx = individual[1] + 1;
             for(int i = 0; i < n; i++) {
+                // only traverse empty position in results
                 if(results[i].empty()) {
                     --idx;
                     if(!idx) {
@@ -38,10 +50,10 @@ public:
     }
 
     /**
-     * solution 2: sort with multiple keys
-     *  Height in descending order
-     *  Taller people count in asceding order
+     * @brief   sort and insert, but order is inverse compared to above method
      * 
+     * @param people 
+     * @return vector<vector<int>> 
      */
     vector<vector<int>> reconstructQueue2(vector<vector<int> >& people) { 
         sort(people.begin(), people.end(),
@@ -64,7 +76,7 @@ int main()
     vector<vector<int>> results;
 
     // case 1
-    people = {{7,0},{4,4},{7,1},{5,0},{6,1},{5,2}};
+    people = {{7,0}, {4,4}, {7,1}, {5,0}, {6,1}, {5,2}};
     results = obj.reconstructQueue2(people);
     print_2d_array(results);
 
