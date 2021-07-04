@@ -28,8 +28,8 @@ public:
          * people = {{4,4}, {5,2}, {5,0}, {6,1}, {7,1}, {7,0}}
          */
         sort(people.begin(), people.end(),
-             [](auto& p1, auto& p2) { return p1[0] < p2[0] || \
-             (p1[0] == p2[0] && p1[1] > p2[1]);} );
+             [](auto& u, auto& v) { return u[0] < v[0] || \
+             (u[0] == v[0] && u[1] > v[1]);} );
 
         int n = people.size();
         vector<vector<int>> results(n);
