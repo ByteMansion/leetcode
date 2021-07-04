@@ -18,6 +18,8 @@ class Solution
 public:
     /**
      * @brief   greedy method
+     *  time complexity: O(n)
+     *  space complexity: O(1)
      * 
      * @param prices 
      * @return int 
@@ -43,6 +45,36 @@ public:
             total += prices[rIdx] - prices[lIdx];
         }
         return total;
+    }
+    /**
+     * @brief greedy method
+     *  time complexity: O(n)
+     *  space complexity: O(n)
+     * 
+     * @param prices 
+     * @return int 
+     */
+    int maxProfit2(vector<int> &prices)
+    {
+        if (prices.size() < 2)
+        {
+            return 0;
+        }
+        int len = prices.size();
+        vector<int> change;
+        for (int i = 1; i < len; i++)
+        {
+            change.push_back(prices[i] - prices[i - 1]);
+        }
+        int result = 0;
+        for (int i = 0; i < len - 1; i++)
+        {
+            if (change[i] > 0)
+            {
+                result += change[i];
+            }
+        }
+        return result;
     }
 };
 
