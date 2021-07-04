@@ -14,19 +14,17 @@ public:
             return 0;
         }
         sort(points.begin(), points.end(), 
-             [](vector<int>& p1, vector<int>& p2) { return p1[1] < p2[1]; });
+             [](vector<int>& u, vector<int>& v) { return u[1] < v[1]; });
         
-        int result = 1;
+        int min_cnt = 1;
         int max_overlap = points[0][1];
         for(int i = 1; i < points.size(); i++) {
-            if(max_overlap >= points[i][0]) {
-                max_overlap = min(max_overlap, points[i][1]);
-                continue;
+            if(max_overlap < points[i][0]) {
+                min_cnt++;
+                max_overlap = points[i][1];
             }
-            max_overlap = points[i][1];
-            result++;
         }
-        return result;
+        return min_cnt;
     }
 };
 
