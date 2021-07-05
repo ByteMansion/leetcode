@@ -78,6 +78,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |144|[Leetcode 144 Binary Tree Preorder Traversal](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)|[solution](./tree/leetcode144.cpp)|**preorder traversal**|
 |l45|[Leetcode 145 Binary Tree Postorder Traversal](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)|[solution](./tree/leetcode145.cpp)|**postorder traversal**|
 |148|[Leetcode 148 Sort List](https://leetcode-cn.com/problems/sort-list/)|[solution](./linkedlist/leetcode148.cpp)|merge sort of linked list|
+|167|[Leetcode 167 Two Sum II](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)|[solution](array/leetcode167.cpp)|two pointers|
 |206|[Leetcode 206 Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[solution](./linkedlist/leetcode206.cpp)||
 |209|[Leetcode 209 Minimum Size Subarray Sum](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)|[solution](./array/leetcode209.cpp)|sliding window|
 |215|[Leetcode 215 Kth Largest Element in An Array](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)|[solution](./array/sort/leetcode215.cpp)|heap sort/quick sort|
