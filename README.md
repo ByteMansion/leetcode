@@ -101,6 +101,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |665|[Leetcode 665 Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/)|[solution](array/leetcode665.cpp)|greedy method|
 |718|[Leetcode 718 Maximum Length of Repeated Subarray](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|[solution](./array/leetcode718.cpp)|dynamic programming|
 |746|[Leetcode 746 Min Cost Climbing Stirs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[solution](./array/leetcode746.cpp)|dynamic programming|
+|756|[Leetcode 756 Pyramid Transition Matrix](https://leetcode-cn.com/problems/pyramid-transition-matrix/)|[solution](string/leetcode756.cpp)||
 |763|[Leetcode 763 Pertition Labels](https://leetcode-cn.com/problems/partition-labels/)|[solution](./string/leetcode763.cpp)|greedy algorithm|
 |792|[Leetcode 792 Number of Matching Subsequences](https://leetcode.com/problems/number-of-matching-subsequences/)|[solution](./string/leetcode792.cpp)||
 |875|[Leetcode 875 Koko Eating Bananas](https://leetcode-cn.com/problems/koko-eating-bananas/)|[solution](./array/leetcode875.cpp)|binary search|
