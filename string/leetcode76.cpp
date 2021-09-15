@@ -16,31 +16,47 @@ using namespace std;
 class Solution {
 public:
     string minWindow(string s, string t) {
-        unordered_map<char, int> mChToCnt;
-        for(auto ch : t) {
-            mChToCnt[ch]++;
+        if(s.length() < t.length()) {
+            return "";
+        }
+        int foundCnt = 0;
+        int lIdx = 0;
+        int minLen = INT_MAX;
+        string res = "";
+        // construct dictionary
+        unordered_map<char, int> mCh2Cnt;
+        for(auto ch: t) {
+            mCh2Cnt[ch] += 1;
         }
 
-        int foundCnt = 0;
-        int lIdx = -1;
-        int minLen = 0;
         for(int i = 0; i < s.length(); i++) {
-            if(mChToCnt[s[i]] == 0) {
+            char c = s[i];
+            if(mCh2Cnt.find(c) == mCh2Cnt.end()) {
                 continue;
             }
-            if(foundCnt == 0) {
-                lIdx = i;
+            if(mCh2Cnt[c]-- > 0) {
+                foundCnt++;
             }
-            mChToCnt[s[i]]--;
-            foundCnt++;
             if(foundCnt == t.length()) {
-                minLen = (minLen == 0) ? (i - lIdx + 1) : min(minLen, i - lIdx + 1);
+                while(lIdx <= i) {
+                    if(mCh2Cnt.find(s[lIdx]) == mCh2Cnt.end()){
+                        lIdx++;
+                    } else if(mCh2Cnt[s[lIdx]] < 0) {
+                        mCh2Cnt[s[lIdx]]++;
+                        lIdx++;
+                    } else {
+                        break;
+                    }
+                }
+                int len = i - lIdx + 1;
+                if(len < minLen) {
+                    minLen = len;
+                    res = s.substr(lIdx, minLen);
+                }
             }
+            
         }
-        if(foundCnt == t.length()) {
-            return s.substr(lIdx, minLen);
-        }
-        return "";
+        return res;
     }
 };
 
