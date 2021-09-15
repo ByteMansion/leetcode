@@ -98,6 +98,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |538|[Leetcode 538 Convert BST to Greater Tree](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)|[solution](./tree/leetcode538.cpp)||
 |572|[Leetcode 572 Subtree of Another Tree](https://leetcode-cn.com/problems/subtree-of-another-tree/)|[solution](./tree/leetcode572.cpp)||
 |605|[Leetcode 605 Can Place Flowers](https://leetcode-cn.com/problems/can-place-flowers/)|[solution](./array/leetcode605.cpp)|greedy method|
+|633|[Leetcode 633 Sum of Square Numbers](https://leetcode-cn.com/problems/sum-of-square-numbers/)|[solution](number/leetcode633.cpp)|two pointers|
 |665|[Leetcode 665 Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/)|[solution](array/leetcode665.cpp)|greedy method|
 |718|[Leetcode 718 Maximum Length of Repeated Subarray](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|[solution](./array/leetcode718.cpp)|dynamic programming|
 |746|[Leetcode 746 Min Cost Climbing Stirs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[solution](./array/leetcode746.cpp)|dynamic programming|
