@@ -77,7 +77,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |135|[Leetcode 135 Candy](https://leetcode-cn.com/problems/candy/)|[solution](./array/leetcode135.cpp)|greedy algorithm|
 |142|[Leetcode 142 Linked List Cycle II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)|[solution](linkedlist/leetcode142.cpp)|two pointers|
 |144|[Leetcode 144 Binary Tree Preorder Traversal](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)|[solution](./tree/leetcode144.cpp)|**preorder traversal**|
-|l45|[Leetcode 145 Binary Tree Postorder Traversal](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)|[solution](./tree/leetcode145.cpp)|**postorder traversal**|
+|145|[Leetcode 145 Binary Tree Postorder Traversal](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)|[solution](./tree/leetcode145.cpp)|**postorder traversal**|
 |148|[Leetcode 148 Sort List](https://leetcode-cn.com/problems/sort-list/)|[solution](./linkedlist/leetcode148.cpp)|merge sort of linked list|
 |167|[Leetcode 167 Two Sum II](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)|[solution](array/leetcode167.cpp)|two pointers|
 |206|[Leetcode 206 Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[solution](./linkedlist/leetcode206.cpp)||
@@ -100,6 +100,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |605|[Leetcode 605 Can Place Flowers](https://leetcode-cn.com/problems/can-place-flowers/)|[solution](./array/leetcode605.cpp)|greedy method|
 |633|[Leetcode 633 Sum of Square Numbers](https://leetcode-cn.com/problems/sum-of-square-numbers/)|[solution](number/leetcode633.cpp)|two pointers|
 |665|[Leetcode 665 Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/)|[solution](array/leetcode665.cpp)|greedy method|
+|680|[Leetcode 680 Valid Palindrome II](https://leetcode-cn.com/problems/valid-palindrome-ii/)|[solution](string/leetcode680.cpp)|two pointers|
 |718|[Leetcode 718 Maximum Length of Repeated Subarray](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)|[solution](./array/leetcode718.cpp)|dynamic programming|
 |746|[Leetcode 746 Min Cost Climbing Stirs](https://leetcode.com/problems/min-cost-climbing-stairs/)|[solution](./array/leetcode746.cpp)|dynamic programming|
 |756|[Leetcode 756 Pyramid Transition Matrix](https://leetcode-cn.com/problems/pyramid-transition-matrix/)|[solution](string/leetcode756.cpp)||
