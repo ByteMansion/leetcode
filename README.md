@@ -56,7 +56,8 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |5|[Leetcode 5 Longest Palindrom Substring](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[solution](./string/leetcode5.cpp)|dynamic programming|
 |8|[Leetcode 8 Atoi](https://leetcode-cn.com/problems/string-to-integer-atoi/)|[solution](./string/leetcode8.cpp)|DFA, Deterministic Finite Automation|
 |14|[Leetcode 14 Longest Common Prefix](https://leetcode-cn.com/problems/longest-common-prefix/)|[solution](./string/leetcode14.cpp)||
-|31|[Leetcode 31 nextPermutation](https://leetcode.com/problems/next-permutation/)|[solution](./array/permutation/leetcode31.cpp)||
+|31|[Leetcode 31 Next Permutation](https://leetcode.com/problems/next-permutation/)|[solution](./array/permutation/leetcode31.cpp)||
+|34|[Leetcode 34 Find First and Last Position of Element in Sorted Array](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|[solution](array/leetcode34.cpp)|binary search|
 |46|[Leetcode 46 Permutations](https://leetcode.com/problems/permutations/)|[solution](./array/permutation/leetcode46.cpp)||
 |47|[Leetcode 47 Permutations II](https://leetcode.com/problems/permutations-ii/)|[solution](./array/permutation/leetcode47.cpp)||
 |53|[Leetcode 53 Maximum Subarray](https://leetcode-cn.com/problems/maximum-subarray/)|[solution](./array/leetcode53.cpp)|dynamic programming|
