@@ -57,6 +57,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |8|[Leetcode 8 Atoi](https://leetcode-cn.com/problems/string-to-integer-atoi/)|[solution](./string/leetcode8.cpp)|DFA, Deterministic Finite Automation|
 |14|[Leetcode 14 Longest Common Prefix](https://leetcode-cn.com/problems/longest-common-prefix/)|[solution](./string/leetcode14.cpp)||
 |31|[Leetcode 31 Next Permutation](https://leetcode.com/problems/next-permutation/)|[solution](./array/permutation/leetcode31.cpp)||
+|33|[Leetcode 33 Search in Rotated Sorted Array](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)|[solution](array/leetcode33.cpp)|binary search|
 |34|[Leetcode 34 Find First and Last Position of Element in Sorted Array](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|[solution](array/leetcode34.cpp)|binary search|
 |46|[Leetcode 46 Permutations](https://leetcode.com/problems/permutations/)|[solution](./array/permutation/leetcode46.cpp)||
 |47|[Leetcode 47 Permutations II](https://leetcode.com/problems/permutations-ii/)|[solution](./array/permutation/leetcode47.cpp)||
@@ -66,6 +67,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |70|[Leetcode 70 Climbing Stirs](https://leetcode.com/problems/climbing-stairs/)|[solution](./number/leetcode70.cpp)|dynamic programming|
 |76|[Leetcode 76 Minimum Window Substring](https://leetcode-cn.com/problems/minimum-window-substring/)|[solution](./string/leetcode76.cpp)||
 |79|[Leetcode 79 Word Search](https://leetcode-cn.com/problems/word-search/)|[solution](./array/leetcode79.cpp)||
+|81|[Leetcode 81 Search in Rotated Sorted Array II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)|[solution](array/leetcode81.cpp)|binary search|
 |92|[Leetcode 92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[solution](./linkedlist/leetcode92.cpp)||
 |94|[Leetcode 94 Binary Tree Inorder Traversal](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)|[solution](./tree/leetcode94.cpp)|**inorder traversal**|
 |95|[Leetcode 95 Unique Binary Search Trees II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/)|[solution](./tree/leetcode95.cpp)|recursive method|
