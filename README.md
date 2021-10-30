@@ -83,6 +83,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |145|[Leetcode 145 Binary Tree Postorder Traversal](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)|[solution](./tree/leetcode145.cpp)|**postorder traversal**|
 |148|[Leetcode 148 Sort List](https://leetcode-cn.com/problems/sort-list/)|[solution](./linkedlist/leetcode148.cpp)|merge sort of linked list|
 |153|[Leetcode 153 Find Minimum in Rotated Sorted Array](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)|[solution](array/leetcode153.cpp)|binary search|
+|154|[Leetcode 154 Find Minimum in Rotated Sorted Array](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[solution](./array/leetcode154.cpp)|binary search|
 |167|[Leetcode 167 Two Sum II](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)|[solution](array/leetcode167.cpp)|two pointers|
 |206|[Leetcode 206 Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[solution](./linkedlist/leetcode206.cpp)||
 |209|[Leetcode 209 Minimum Size Subarray Sum](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)|[solution](./array/leetcode209.cpp)|sliding window|
