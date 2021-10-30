@@ -8,44 +8,21 @@
 class Solution
 {
 public:
+    /**
+     * @brief Binary search algorithm cannot decrease the time complexity
+     * in worst case. The worst case occurs when we cannot assign the border
+     * values according to the left/right border and the middle value.
+     * Therefore, the time complexity is O(n).
+     * 
+     */
     bool search(vector<int> &nums, int target)
     {
-        int l = 0, r = nums.size() - 1;
-
-        while (l + 1 < r)
-        {
-            int mid = l + (r - l) / 2;
-            if (nums[mid] == target)
-            {
+        for (size_t i = 0; i < nums.size(); i++) {
+            if (nums[i] == target) {
                 return true;
             }
-            else if (nums[mid] < target)
-            {
-                if (nums[mid] < nums[l] && target >= nums[l])
-                {
-                    r = mid;
-                }
-                else
-                {
-                    l = mid;
-                }
-            }
-            else
-            {
-                if (nums[mid] > nums[r] && target <= nums[r])
-                {
-                    l = mid;
-                }
-                else
-                {
-                    r = mid;
-                }
-            }
         }
-        if (nums[l] == target)
-            return true;
-        if (nums[r] == target)
-            return true;
+        
         return false;
     }
 };
