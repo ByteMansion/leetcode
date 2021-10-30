@@ -11,34 +11,20 @@ public:
     {
         int l = 0, r = nums.size() - 1;
 
-        while (l + 1 < r)
-        {
+        while (l + 1 < r) {
             int mid = l + (r - l) / 2;
-            if (nums[mid] == target)
-            {
+            if (nums[mid] == target) {
                 return mid;
-            }
-            else if (nums[mid] < target)
-            {
+            } else if (nums[mid] < target) {
                 if (nums[mid] < nums[l] && target >= nums[l])
-                {
                     r = mid;
-                }
                 else
-                {
                     l = mid;
-                }
-            }
-            else
-            {
+            } else {
                 if (nums[mid] > nums[r] && target <= nums[r])
-                {
                     l = mid;
-                }
                 else
-                {
                     r = mid;
-                }
             }
         }
         if (nums[l] == target)
