@@ -102,6 +102,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |455|[Leetcode 455 Assign Cookies](https://leetcode-cn.com/problems/assign-cookies/)|[solution](./array/leetcode455.cpp)|greedy algorithm|
 |524|[Leetcode 524 Longest Word in Dictionary through Deleting](https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/)|[solution](string/leetcode524.cpp)||
 |538|[Leetcode 538 Convert BST to Greater Tree](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/)|[solution](./tree/leetcode538.cpp)||
+|540|[Leetcode 540 Single Element in a Sorted Array](https://leetcode-cn.com/problems/single-element-in-a-sorted-array/)|[solution](array/leetcode540.cpp)|binary search|
 |572|[Leetcode 572 Subtree of Another Tree](https://leetcode-cn.com/problems/subtree-of-another-tree/)|[solution](./tree/leetcode572.cpp)||
 |605|[Leetcode 605 Can Place Flowers](https://leetcode-cn.com/problems/can-place-flowers/)|[solution](./array/leetcode605.cpp)|greedy method|
 |633|[Leetcode 633 Sum of Square Numbers](https://leetcode-cn.com/problems/sum-of-square-numbers/)|[solution](number/leetcode633.cpp)|two pointers|
