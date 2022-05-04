@@ -58,6 +58,40 @@ public:
         }
         return results;
     }
+
+    /**
+     * 3rd solution: iterative method
+     * This solution is similar to the 2nd.
+     * 
+     * @param root 
+     * @retval an array of value in preoder
+     */
+    vector<int> preorderTraversal3(TreeNode *root) {
+        if (root == nullptr) {
+            return vector<int>{};
+        }
+
+        stack<TreeNode *> sNode;
+        vector<int> res;
+        while (root) {
+            res.push_back(root->val);
+            sNode.push(root);
+            root = root->left;
+        }
+        while (!sNode.empty()) {
+            TreeNode *node = sNode.top();
+            sNode.pop();
+            TreeNode *t = node->right;
+
+            while (t) {
+                sNode.push(t);
+                res.push_back(t->val);
+                t = t->left;
+            }
+        }
+        
+        return res;
+    }
 };
 
 int main()
@@ -92,7 +126,7 @@ int main()
     node4->left = node7; node4->right = node8;
     node6->left = node9;
 
-    results= obj.preorderTraversal2(root);
+    results= obj.preorderTraversal3(root);
     print_array(results);
 
     return 0;

@@ -62,6 +62,43 @@ public:
         return results;
     }
 
+    /**
+     * 3rd solution: iterative method
+     * 
+     * @param root 
+     * @return vector<int> 
+     */
+    vector<int> postorderTraversal3(TreeNode* root) {
+        if (root == nullptr) {
+            return vector<int>{};
+        }
+        
+        stack<TreeNode *> sNode;
+        vector<int> res;
+        while (root) {
+            sNode.push(root);
+            root = root->left;
+        }
+        
+        TreeNode *pre = nullptr;
+        while (!sNode.empty()) {
+            TreeNode *top = sNode.top();
+            TreeNode *tmp = top->right;
+            if (tmp == pre) {
+                sNode.pop();
+                res.push_back(top->val);
+                pre = top;
+            } else {
+                while (tmp) {
+                    sNode.push(tmp);
+                    tmp = tmp->left;
+                }
+                pre = nullptr;
+            }
+        }
+
+        return res;
+    }
 };
 
 int main()
@@ -96,7 +133,7 @@ int main()
     node4->left = node7; node4->right = node8;
     node6->left = node9;
 
-    results= obj.postorderTraversal2(root);
+    results= obj.postorderTraversal3(root);
     print_array(results);
 
     return 0;

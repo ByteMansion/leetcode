@@ -1,11 +1,14 @@
 cmake_minimum_required(VERSION 3.19)
 
-# using c++11
+# set the project name
+project(leetcode)
+
+# using c++17
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# set the project name
-project(leetcode)
+set(CMAKE_C_COMPILER gcc)
+set(CMAKE_CXX_COMPILER g++)
 
 # add subdirectory
 add_subdirectory(array)
