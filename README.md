@@ -81,6 +81,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |142|[Leetcode 142 Linked List Cycle II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)|[solution](linkedlist/leetcode142.cpp)|two pointers|
 |144|[Leetcode 144 Binary Tree Preorder Traversal](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)|[solution](./tree/leetcode144.cpp)|**preorder traversal**|
 |145|[Leetcode 145 Binary Tree Postorder Traversal](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)|[solution](./tree/leetcode145.cpp)|**postorder traversal**|
+|l47|[Leetcode 147 Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/)|[solution](linkedlist/leetcode147.cpp)|insertion sort of linked list|
 |148|[Leetcode 148 Sort List](https://leetcode-cn.com/problems/sort-list/)|[solution](./linkedlist/leetcode148.cpp)|merge sort of linked list|
 |153|[Leetcode 153 Find Minimum in Rotated Sorted Array](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)|[solution](array/leetcode153.cpp)|binary search|
 |154|[Leetcode 154 Find Minimum in Rotated Sorted Array](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[solution](./array/leetcode154.cpp)|binary search|
