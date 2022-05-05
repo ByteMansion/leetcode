@@ -56,6 +56,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |5|[Leetcode 5 Longest Palindrom Substring](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[solution](./string/leetcode5.cpp)|dynamic programming|
 |8|[Leetcode 8 Atoi](https://leetcode-cn.com/problems/string-to-integer-atoi/)|[solution](./string/leetcode8.cpp)|DFA, Deterministic Finite Automation|
 |14|[Leetcode 14 Longest Common Prefix](https://leetcode-cn.com/problems/longest-common-prefix/)|[solution](./string/leetcode14.cpp)||
+|21|[Leetcode 21](https://leetcode.com/problems/merge-two-sorted-lists/)|[solution](linkedlist/leetcode21.cpp)||
 |31|[Leetcode 31 Next Permutation](https://leetcode.com/problems/next-permutation/)|[solution](./array/permutation/leetcode31.cpp)||
 |33|[Leetcode 33 Search in Rotated Sorted Array](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)|[solution](array/leetcode33.cpp)|binary search|
 |34|[Leetcode 34 Find First and Last Position of Element in Sorted Array](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|[solution](array/leetcode34.cpp)|binary search|
