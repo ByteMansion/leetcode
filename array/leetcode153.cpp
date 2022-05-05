@@ -1,5 +1,6 @@
 /**
  * @brief Leetcode 153 Find Minimum in Rotated Sorted Array
+ *        All elements are unique.
  * 
  */
 
@@ -15,13 +16,13 @@ public:
 
         while (l + 1 < r) {
             int m = l + (r - l) / 2;
-            if(nums[m] > nums[l] && nums[m] > nums[r]) {
+            if(nums[m] > nums[l] && nums[l] > nums[r]) {
                 l = m;
             } else {
                 r = m;
             }
         }
-        return (nums[l] >= nums[r]) ? nums[r] : nums[l];
+        return (nums[l] > nums[r]) ? nums[r] : nums[l];
     }
 };
 
