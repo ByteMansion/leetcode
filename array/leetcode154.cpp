@@ -11,9 +11,9 @@ public:
         if(nums[0] < nums[len]) {
             return nums[0];
         }
-        int minVal = nums[0];
 
-        for(int i = 0; i < nums.size() - 1; i++) {
+        int minVal = nums[0];
+        for(int i = 0; i < len; ++i) {
             if(nums[i] > nums[i+1]) {
                 minVal = nums[i+1];
                 break;
@@ -37,6 +37,12 @@ int main()
     nums = {1, 1, 1, 1, 13, 1, 1, 1};
     print_array(nums);
     cout << "The minimum: " << obj.findMin(nums) << endl;
+
+    // case 3
+    nums = {3, 1};
+    print_array(nums);
+    cout << "The minimum: " << obj.findMin(nums) << endl;
   
+    system("pause");
     return 0;
 }
