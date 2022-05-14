@@ -137,22 +137,30 @@ public:
      */
     ListNode* sortList4(ListNode* head)
     {
-        if(head == nullptr || head->next == nullptr) {
+        if (head == nullptr || head->next == nullptr) {
             return head;
         }
-        // find the middle node of linked list
-        ListNode* fast = head;
-        ListNode* slow = head;
-        while(fast->next && fast->next->next) {  // slow pointer must be valid
-            slow = slow->next;
-            fast = fast->next->next;
+        ListNode *d_lft = new ListNode(-1);
+        ListNode *d_rgt = new ListNode(-1);
+        ListNode *lft = d_lft, *rgt = d_rgt;
+        while (head) {
+            lft->next = head;
+            lft = lft->next;
+            head = head->next;
+            if (head) {
+                rgt->next = head;
+                rgt = rgt->next;
+                head = head->next;    
+            }
         }
-        fast = slow;
-        slow = slow->next;
-        fast->next = nullptr;
-        ListNode* left = sortList4(head);
-        ListNode* right = sortList4(slow);
-        return merge(left, right);
+        lft->next = nullptr;
+        lft = d_lft->next;
+        rgt->next = nullptr;
+        rgt = d_rgt->next;
+        delete d_lft; delete d_rgt;
+        ListNode *node1 = sortList4(lft);
+        ListNode *node2 = sortList4(rgt);
+        return merge(node1, node2);
     }
 private:
     ListNode* merge(ListNode* left, ListNode* right)
@@ -202,8 +210,6 @@ public:
 private:
     void quick(ListNode* preHead, ListNode* head, ListNode* end)
     {
-        // this condition canNOT be: 
-        // head == nullptr || head->next == end
         if(head == end || head->next == end) {
             return;
         }
