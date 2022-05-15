@@ -7,10 +7,16 @@
 class Solution {
 public:
     int singleNonDuplicate(vector<int>& nums) {
-        return singleNonDuplicateHelper(nums, 0, nums.size() - 1);
+        if (nums.size() == 1) {
+            return nums[0];
+        }
+        return singleNonDuplicateHelper2(nums, 0, nums.size() - 1);
     }
 
 private:
+    /**
+     * Solution 1
+     */
     int singleNonDuplicateHelper(vector<int>& nums, int l, int r) {
         int len = r - l + 1;
         if(len == 1) return nums[l];
@@ -38,6 +44,35 @@ private:
         }
      
         return singleNonDuplicateHelper(nums, l, r);
+    }
+    /**
+     * Solution 2
+     */
+    int singleNonDuplicateHelper2(vector<int>& nums, int l, int r) {
+        int m = l + (r - l) / 2;
+        while (r - l + 1 > 3) {
+            if (nums[m] == nums[m-1]) {
+                if ((m - l + 1) % 2) {
+                    r = m;
+                } else {
+                    l = m + 1;
+                } 
+            } else if (nums[m] == nums[m+1]){
+                if ((m - l) % 2) {
+                    r = m - 1;
+                } else {
+                    l = m;
+                }
+            } else {
+                return nums[m];
+            }
+            m = l + (r - l) / 2;
+        }
+        
+        if (nums[m] == nums[l]) {
+            return nums[r];
+        }
+        return nums[l];
     }
 };
 
