@@ -2,7 +2,7 @@
  * @brief   两个链表的第一个公共节点
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 class Solution {
 public:

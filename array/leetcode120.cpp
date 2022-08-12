@@ -7,7 +7,7 @@
  * either index i or index i + 1 on the next row.
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 

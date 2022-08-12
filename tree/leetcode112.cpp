@@ -6,7 +6,7 @@
  *  Note: A leaf is a node with no children.
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <iostream>
 #include <vector>
 #include <stack>

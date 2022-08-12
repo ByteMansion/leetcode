@@ -17,7 +17,7 @@
  * 4. The length of words[i] will be in the range of [1, 50].
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <vector>
 #include <cstring>
 

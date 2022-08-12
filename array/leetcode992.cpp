@@ -7,7 +7,7 @@
  *
  * (For example, [1,2,3,1,2] has 3 different integers: 1, 2, and 3.)
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <unordered_map>
 #include <map>
 

@@ -1,3 +1,4 @@
+include(CMAKE_SOURCE_DIR/include/)
 
 add_executable(eBay eBay.cpp)
 add_executable(huawei1 huawei1.cpp)

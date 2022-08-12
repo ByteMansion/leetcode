@@ -4,7 +4,7 @@
  * Reverse a linked list from position m to n. Do it in one-pass.
  * Note: 1 ≤ m ≤ n ≤ length of list.
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 class Solution {
 public:

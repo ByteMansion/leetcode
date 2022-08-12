@@ -11,7 +11,7 @@
  * 2. Every cost[i] will be an integer in the range [0, 999].
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <vector>
 #include <cmath>
 

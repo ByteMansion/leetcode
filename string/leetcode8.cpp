@@ -2,7 +2,7 @@
  * @brief   Leetcode 8 Atoi
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <vector>
 #include <string>
 extern "C" {

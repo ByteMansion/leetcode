@@ -10,7 +10,7 @@
  * What is the minimum candies you must give?
  *  
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <algorithm>
 #include <iostream>
 

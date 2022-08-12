@@ -1,4 +1,4 @@
-
+include(CMAKE_SOURCE_DIR/include/)
 
 add_executable(leetcode31 leetcode31.cpp)
 add_executable(leetcode46 leetcode46.cpp)

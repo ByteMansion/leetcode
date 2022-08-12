@@ -3,7 +3,7 @@
  *
  * @brief Leetcode 452 Minimum Number of Arrows to Burst Balloons
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 

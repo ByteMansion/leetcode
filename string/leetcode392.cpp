@@ -16,7 +16,7 @@
  * In this scenario, how would you change your code?
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <cstring>
 #include <iostream>
 

@@ -2,7 +2,7 @@
  * @brief   Offer 51 数组中的逆序对
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 class BIT {
 private:

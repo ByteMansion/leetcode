@@ -7,7 +7,7 @@
  *  - The result can be in any order.
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <vector>
 #include <map>
 #include <algorithm>

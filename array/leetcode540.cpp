@@ -2,7 +2,7 @@
  * @brief Leetcode 540 Single Element in a Sorted Array
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 class Solution {
 public:

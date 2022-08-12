@@ -8,7 +8,7 @@
  * Return the answer in any order.
  * (1 <= n <= 8)
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 

@@ -1,11 +1,9 @@
 #!/bin/bash
 
 # create bin folder
-mkdir bin
-
-# configure the project and generate a native build system
-cd bin
-cmake ../
-
-# compile the project
-cmake --build .
+if [ -e build ]
+then
+    cmake --build build -j8
+else
+    cmake -S . -B build
+fi

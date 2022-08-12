@@ -2,7 +2,7 @@
  * @brief   Leetcode 167 Two Sum II
  *  The array is sorted.
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <vector>
 
 class Solution {

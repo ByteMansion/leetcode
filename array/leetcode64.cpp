@@ -6,7 +6,7 @@
  * 
  * Note: You can only move either down or right at any point in time.
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 

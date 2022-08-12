@@ -5,7 +5,7 @@
  *  A subtree of s is a tree consists of a node in s and all of this node's descendants.
  *  The tree s could also be considered as a subtree of itself.
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <stack>
 #include <queue>
 #include <vector>

@@ -6,7 +6,7 @@
  * Note: Given n will be a positive integer.
  *
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <vector>
 
 using namespace std;

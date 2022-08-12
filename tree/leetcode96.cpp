@@ -6,7 +6,7 @@
  * 
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 

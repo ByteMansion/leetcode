@@ -5,7 +5,7 @@
  * greater than the original key in BST.
  *
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <iostream>
 #include <stack>
 #include <vector>

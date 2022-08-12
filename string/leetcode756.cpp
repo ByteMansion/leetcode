@@ -2,7 +2,7 @@
  * @brief Leetcode 756 Pyramid Transition Matrix
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <string>
 #include <unordered_map>
 

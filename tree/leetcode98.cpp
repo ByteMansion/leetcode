@@ -9,7 +9,7 @@
     - Both the left and right subtrees must also be binary search trees.
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <iostream>
 #include <vector>
 #include <stack>

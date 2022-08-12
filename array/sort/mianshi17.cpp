@@ -15,7 +15,7 @@
  */
 
 
-#include "../../include/utils.hpp"
+#include "utils.hpp"
 #include <iostream>
 #include <vector>
 #include <cstdlib>

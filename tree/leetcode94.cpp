@@ -2,7 +2,7 @@
  * @brief    Leetcode 94 Binary Tree Inorder Traversal
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <stack>
 
 class Solution {

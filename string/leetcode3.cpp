@@ -4,7 +4,7 @@
  * without repeating characters.
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <cstring>
 #include <iostream>
 #include <map>

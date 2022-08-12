@@ -2,7 +2,7 @@
  * @brief Leetcode 34 Find First and Last Position of Element in Sorted Array
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 class Solution
 {

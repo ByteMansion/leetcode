@@ -2,7 +2,7 @@
  * @brief Leetcode 154 Find Minimum in Rotated Sorted Array II
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 class Solution {
 public:

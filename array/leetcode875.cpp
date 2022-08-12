@@ -12,7 +12,7 @@
  * Return the minimum integer K such that she can eat all the bananas within H hours.
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 

@@ -2,7 +2,7 @@
  * @brief   Leetcode 14 Longest Common Prefix
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <string>
 
 class Solution {

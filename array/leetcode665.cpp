@@ -7,7 +7,7 @@
  * holds for every i (0-based) such that (0 <= i <= n - 2).
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 class Solution
 {

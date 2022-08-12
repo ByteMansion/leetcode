@@ -2,7 +2,7 @@
  * @brief   Leetcode 142 Linked List Cycle II
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 class Solution {
 public:

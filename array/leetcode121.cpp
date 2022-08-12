@@ -9,7 +9,7 @@
  *
  * Note that you cannot sell a stock before you buy one.
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <vector>
 
 using namespace std;

@@ -9,7 +9,7 @@
  * Note that If there is such a window, it is guaranteed that 
  * there will always be only one unique minimum window in s.
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 

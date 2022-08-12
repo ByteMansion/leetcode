@@ -8,7 +8,7 @@
  * 0 <= A[i],B[i] < 100
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <map>
 
 using namespace std;

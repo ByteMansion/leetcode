@@ -13,7 +13,7 @@
 #include <algorithm>
 #include <unordered_map>
 #include <cmath>
-#include "../../include/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 

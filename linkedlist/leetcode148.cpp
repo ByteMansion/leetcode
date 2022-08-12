@@ -3,7 +3,7 @@
  * @brief Leetcode 148 Sort List
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 class Solution {
 public:

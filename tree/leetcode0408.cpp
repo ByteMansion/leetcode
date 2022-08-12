@@ -7,7 +7,7 @@
  * NOTE: This is not necessarily a binary search tree.
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <iostream>
 
 using namespace std;

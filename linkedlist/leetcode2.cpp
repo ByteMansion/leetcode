@@ -22,7 +22,7 @@
  *  Output: [8,9,9,9,0,0,0,1]
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <iostream>
 
 using namespace std;

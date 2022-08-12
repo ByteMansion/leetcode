@@ -10,7 +10,7 @@
  * Note: You may not engage in multiple transactions simultaneously 
  * (i.e., you must sell the stock before you buy again).
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <vector>
 
 class Solution

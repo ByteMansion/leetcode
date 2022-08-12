@@ -7,7 +7,7 @@
  * Could you implement both?
  */
 #include <iostream>
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 

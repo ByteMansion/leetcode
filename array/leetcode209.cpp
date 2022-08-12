@@ -6,7 +6,7 @@
  * the sum ≥ s. If there isn't one, return 0 instead.
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 

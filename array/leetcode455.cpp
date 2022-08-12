@@ -12,7 +12,7 @@
  * content children and output the maximum number.
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 

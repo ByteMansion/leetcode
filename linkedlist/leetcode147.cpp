@@ -5,7 +5,7 @@
  * @date 2022-05-05
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 /**
  * Definition for singly-linked list.
  * struct ListNode {

@@ -1,9 +1,4 @@
-# using c++11
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
-
-# set project name
-project(array)
+include(CMAKE_SOURCE_DIR/include/)
 
 add_subdirectory(permutation)
 add_subdirectory(sort)
@@ -39,3 +34,4 @@ add_executable(leetcode153 leetcode153.cpp)
 add_executable(leetcode154 leetcode154.cpp)
 add_executable(leetcode540 leetcode540.cpp)
 add_executable(leetcode4 leetcode4.cpp)
+add_executable(leetcode523 leetcode523.cpp)

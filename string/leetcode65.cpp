@@ -2,7 +2,7 @@
  * @brief   Leetcode 65 Valid Number
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <iostream>
 #include <string>
 

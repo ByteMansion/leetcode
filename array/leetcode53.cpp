@@ -5,7 +5,7 @@
  * and return its sum.
  *
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <vector>
 #include <iostream>
 

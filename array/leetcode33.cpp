@@ -2,7 +2,7 @@
  * @brief Leetcode 33 Search in Rotated Sorted Array
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 class Solution
 {

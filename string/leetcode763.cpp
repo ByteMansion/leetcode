@@ -8,7 +8,7 @@
  * representing the size of these parts.
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 using namespace std;
 

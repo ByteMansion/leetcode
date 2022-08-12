@@ -3,7 +3,7 @@
  * 
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 struct Element {
     int num;

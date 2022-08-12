@@ -3,7 +3,7 @@
  * @brief Leetcode 406 Queue Reconstruction by Height
  * 
  */
-#include "../include/utils.hpp"
+#include "utils.hpp"
 #include <map>
 
 using namespace std;

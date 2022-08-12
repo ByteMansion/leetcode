@@ -4,7 +4,7 @@
  * 
  */
 
-#include "../include/utils.hpp"
+#include "utils.hpp"
 
 class Solution {
 public:
