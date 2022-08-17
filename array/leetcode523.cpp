@@ -10,14 +10,21 @@
  */
 #include <vector>
 #include <iostream>
+#include <set>
 #include "utils.hpp"
 
 using namespace std;
 
 class Solution {
 public:
+    /**
+     * solution 1:
+     * - time complexity: O(n^2)
+     * - space complexity: O(n)
+     */
     bool checkSubarraySum(vector<int>& nums, int k) {
-        if (nums.size() < 2) return false;
+        if (nums.size() < 2) 
+            return false;
         int len = nums.size();
         vector<int> sum(len, 0);
         int interval;
@@ -39,6 +46,35 @@ public:
             }
         }
      
+        return false;
+    }
+    /**
+     * solution 2: Prefix sum and same remainder after division
+     * - time complexity: O(n)
+     * - space complexity: O(n)
+     */
+    bool checkSubarraySum2(vector<int>& nums, int k)
+    {
+        if (nums.size() < 2)
+        {
+            return false;
+        }
+        int len = nums.size();
+        vector<int> sum(len + 1, 0);
+        set<int> hashtbl;
+        for (int i = 1; i < len + 1; ++i)
+        {
+            sum[i] = sum[i - 1] + nums[i - 1];
+        }
+        for (int i = 2; i < len + 1; i++)
+        {
+            int val = sum[i - 2] % k;
+            hashtbl.insert(val);            
+            if (hashtbl.find(sum[i] % k) != hashtbl.end())
+            {
+                return true;
+            }
+        }
         return false;
     }
 };
