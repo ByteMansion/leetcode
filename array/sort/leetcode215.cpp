@@ -31,11 +31,10 @@ public:
 
 public:
     /**
-     * 2nd solution: use quicksort algorithm
+     * 2nd solution: quicksort algorithm
      *
-     * - time complexity: O(n)
-     * - space complexity: O(logn), this is the stack cost
-     *   using recursive method.
+     * - time complexity: O(nlogn) on average
+     * - space complexity: O(1)
      *
      */
     int findKthLargest2(vector<int>& nums, int k) {
@@ -44,8 +43,8 @@ public:
         // select kth largest element ranging from left index to right index
         return quickSelect(nums,
                            0 /*left index*/,
-                           nums.size()-1 /*right index*/,
-                           nums.size()-k /*position of the kth largest*/);
+                           nums.size() - 1 /*right index*/,
+                           nums.size() - k /*position of the kth largest*/);
     }
 private:
     int quickSelect(vector<int>& nums, int l, int r, int pos)
@@ -82,10 +81,10 @@ private:
 
 public:
     /**
-     * 3nd solution: using heap sort
+     * 3nd solution: heap sort
      *
-     * Special data structure, such as heap or priority can solve this
-     * issue, but heap sort is preferred for interviewee.
+     * Special data structures, such as heap or priority can solve this
+     * issue, but heap sort is preferred for job interview.
      *
      * - time complexity: O(nlogn), cost of building heap O(n), delete element
      *   and then rebuild heap O(klogn) (k < n), total cost O(n + klogn)=O(nlogn)
