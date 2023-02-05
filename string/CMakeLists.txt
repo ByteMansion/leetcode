@@ -1,4 +1,4 @@
-include(CMAKE_SOURCE_DIR/include/)
+include(${CMAKE_SOURCE_DIR}/include/)
 
 add_executable(leetcode3 leetcode3.cpp)
 add_executable(leetcode5 leetcode5.cpp)

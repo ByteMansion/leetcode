@@ -38,7 +38,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 ## Quick Access
 |No.|Leetcode Problems|Solutions|Related Knowledge|
 |-|-|-|-|
-|*|[Offer 45 把数组排成最小的数](https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)|[solution](./string/offer45.cpp)|compare strings|
+|*|[Offer 45 把数组排成最小的数](https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)|[solution](./string/offer45.cpp)||
 |*|[Offer 51 数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)|[solution](./array/offer51.cpp)|merge sort|
 |*|[Mianshi 17 Smallest K LCCI](https://leetcode-cn.com/problems/smallest-k-lcci/)|[solution](./array/sort/mianshi17.cpp)|quick sort|
 |*|HUAWEI 机试 随机数去重和排序|[solution](./interview/huawei1.cpp)||
@@ -57,7 +57,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |5|[Leetcode 5 Longest Palindrom Substring](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[solution](./string/leetcode5.cpp)|dynamic programming|
 |8|[Leetcode 8 Atoi](https://leetcode-cn.com/problems/string-to-integer-atoi/)|[solution](./string/leetcode8.cpp)|DFA, Deterministic Finite Automation|
 |14|[Leetcode 14 Longest Common Prefix](https://leetcode-cn.com/problems/longest-common-prefix/)|[solution](./string/leetcode14.cpp)||
-|21|[Leetcode 21](https://leetcode.com/problems/merge-two-sorted-lists/)|[solution](linkedlist/leetcode21.cpp)||
+|21|[Leetcode 21 Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[solution](linkedlist/leetcode21.cpp)||
 |31|[Leetcode 31 Next Permutation](https://leetcode.com/problems/next-permutation/)|[solution](./array/permutation/leetcode31.cpp)||
 |33|[Leetcode 33 Search in Rotated Sorted Array](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)|[solution](array/leetcode33.cpp)|binary search|
 |34|[Leetcode 34 Find First and Last Position of Element in Sorted Array](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|[solution](array/leetcode34.cpp)|binary search|
@@ -83,7 +83,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |142|[Leetcode 142 Linked List Cycle II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)|[solution](linkedlist/leetcode142.cpp)|two pointers|
 |144|[Leetcode 144 Binary Tree Preorder Traversal](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)|[solution](./tree/leetcode144.cpp)|**preorder traversal**|
 |145|[Leetcode 145 Binary Tree Postorder Traversal](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)|[solution](./tree/leetcode145.cpp)|**postorder traversal**|
-|l47|[Leetcode 147 Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/)|[solution](linkedlist/leetcode147.cpp)|insertion sort of linked list|
+|**147**|[Leetcode 147 Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/)|[solution](linkedlist/leetcode147.cpp)|insertion sort of linked list|
 |148|[Leetcode 148 Sort List](https://leetcode-cn.com/problems/sort-list/)|[solution](./linkedlist/leetcode148.cpp)|merge sort of linked list|
 |153|[Leetcode 153 Find Minimum in Rotated Sorted Array](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)|[solution](array/leetcode153.cpp)|binary search|
 |154|[Leetcode 154 Find Minimum in Rotated Sorted Array](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[solution](./array/leetcode154.cpp)|binary search|
