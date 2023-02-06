@@ -28,7 +28,7 @@ public:
             }
             // update character index
             mChToIdx[ch] = idx;
-            maxLen = max(idx-leftIdx+1, maxLen);
+            maxLen = max(idx - leftIdx + 1, maxLen);
         }
         return maxLen;
     }
