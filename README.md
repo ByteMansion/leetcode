@@ -1,4 +1,13 @@
-[toc]
+[Solutions to Leetcode Problems](#solutions-to-leetcode-problems)
+
+[Prerequisite](#prerequisite)
+
+[Knowledge Base](#knowledge-base)
+
+[Compilation](#compilation)
+
+[Quick Access](#quick-access)
+
 
 # Solutions to Leetcode Problems
 This repo is aimed at documenting solutions to Leetcode problems or online judge problems in interview.

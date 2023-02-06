@@ -3,7 +3,9 @@
 # create bin folder
 if [ -e build ]
 then
-    cmake --build build -j8
+    rm -fr build
 else
     cmake -S . -B build
 fi
+
+cmake --build build -j16
