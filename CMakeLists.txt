@@ -10,6 +10,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_C_COMPILER gcc)
 set(CMAKE_CXX_COMPILER g++)
 
+enable_testing()
+
 # add subdirectory
 add_subdirectory(array)
 add_subdirectory(interview)
