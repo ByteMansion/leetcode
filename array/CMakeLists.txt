@@ -1,4 +1,4 @@
-include(CMAKE_SOURCE_DIR/include/)
+include_directories(${CMAKE_SOURCE_DIR}/include/)
 
 add_subdirectory(permutation)
 add_subdirectory(sort)
