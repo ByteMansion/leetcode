@@ -7,71 +7,56 @@
 class Solution
 {
 public:
-    vector<int> searchRange(vector<int> &nums, int target)
-    {
+    vector<int> searchRange(vector<int> &nums, int target) {
         if (nums.empty())
         {
-            return {-1, -1};
+            return vector<int>{-1, -1};
         }
-        vector<int> ret;
-        int l = findFirstPos(nums, target);
-        ret.push_back(l);
-        int r = findLastPos(nums, target);
-        ret.push_back(r);
-        return ret;
+
+        return vector<int>{findFirstPos(nums, target), findLastPos(nums, target)};
     }
 
 private:
-    int findFirstPos(vector<int> &nums, int target)
-    {
+    int findFirstPos(vector<int> &nums, int target) {
         int l = 0, r = nums.size() - 1;
         int ret = -1;
-        while (l + 1 < r)
-        {
+        while (l + 1 < r) {
             int mid = l + (r - l) / 2;
-            if (nums[mid] == target)
-            {
+            if (nums[mid] == target) {
                 ret = r = mid;
-            }
-            else if (nums[mid] > target)
-            {
+            } else if (nums[mid] > target) {
                 r = mid;
-            }
-            else
-            {
+            } else {
                 l = mid;
             }
         }
-        if (nums[r] == target)
-            ret = r;
-        if (nums[l] == target)
-            ret = l;
+        if (nums[l] == target) {
+            return l;
+        }
+        if (nums[r] == target) {
+            return r;
+        }
         return ret;
     }
-    int findLastPos(vector<int> &nums, int target)
-    {
+    int findLastPos(vector<int> &nums, int target) {
         int l = 0, r = nums.size() - 1;
         int ret = -1;
-        while (l + 1 < r)
-        {
+        while (l + 1 < r) {
             int mid = l + (r - l) / 2;
-            if (nums[mid] == target)
-            {
+            if (nums[mid] == target) {
                 ret = l = mid;
-            }
-            else if (nums[mid] > target)
-            {
+            } else if (nums[mid] > target) {
                 r = mid;
-            }
-            else
-            {
+            } else {
                 l = mid;
             }
         }
-        if (nums[l] == target)
-            ret = l;
-        if (nums[r] == target)
-            ret = r;
+        if (nums[r] == target) {
+            return r;
+        }
+        if (nums[l] == target) {
+            return l;
+        }
         return ret;
     }
 };

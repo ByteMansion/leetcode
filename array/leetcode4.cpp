@@ -1,9 +1,5 @@
 /**
- * @file leetcode4.cpp
- * @brief Median of Two Sorted Arrays
- * @date 2022-05-16
- * 
- * @copyright Copyright (c) 2022
+ * @brief Leetcode 4 Median of Two Sorted Arrays
  * 
  */
 
@@ -14,8 +10,7 @@ public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         int m = nums1.size();
         int n = nums2.size();
-        if ((m + n) % 2)
-        {
+        if ((m + n) % 2) {
             return findKthNum(nums1, 0, m, nums2, 0, n, (m + n) / 2 + 1);
         }
         int res1 = findKthNum(nums1, 0, m, nums2, 0, n, (m + n) / 2);
@@ -29,30 +24,23 @@ private:
     */
     int findKthNum(vector<int>& nums1, int l1, int r1, 
                    vector<int>& nums2, int l2, int r2,
-                   int k)
-    {
+                   int k) {
         int len1 = r1 - l1;
         int len2 = r2 - l2;
-        if (len1 > len2)
-        {
+        if (len1 > len2) {
             return findKthNum(nums2, l2, r2, nums1, l1, r1, k);
         }
-        if (len1 == 0)
-        {
+        if (len1 == 0) {
             return nums2[l2 + k - 1];
         }
-        if (k == 1)
-        {
+        if (k == 1) {
             return min(nums1[l1], nums2[l2]);
         }
         int m1 = l1 + min(len1, k / 2) - 1;
         int m2 = l2 + min(len2, k / 2) - 1;
-        if (nums1[m1] > nums2[m2])
-        {
+        if (nums1[m1] > nums2[m2]) {
             return findKthNum(nums1, l1, r1, nums2, m2 + 1, r2, k - (m2 - l2 + 1));
-        }
-        else 
-        {
+        } else {
             return findKthNum(nums1, m1 + 1, r1, nums2, l2, r2, k - (m1 - l1 + 1));
         }
     }
