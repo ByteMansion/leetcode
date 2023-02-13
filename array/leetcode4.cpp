@@ -16,22 +16,26 @@ public:
         int n = nums2.size();
         if ((m + n) % 2)
         {
-            return findKthLargestNum(nums1, 0, m, nums2, 0, n, (m + n) / 2 + 1);
+            return findKthNum(nums1, 0, m, nums2, 0, n, (m + n) / 2 + 1);
         }
-        int res1 = findKthLargestNum(nums1, 0, m, nums2, 0, n, (m + n) / 2);
-        int res2 = findKthLargestNum(nums1, 0, m, nums2, 0, n, (m + n) / 2 + 1);
+        int res1 = findKthNum(nums1, 0, m, nums2, 0, n, (m + n) / 2);
+        int res2 = findKthNum(nums1, 0, m, nums2, 0, n, (m + n) / 2 + 1);
         return 1.0 * (res1 + res2) / 2.0;
     }
 private:
-    int findKthLargestNum(vector<int>& nums1, int l1, int r1, 
-                          vector<int>& nums2, int l2, int r2,
-                          int k)
+    /**
+    * @brief Find Kth number in 2 sorted arrays ranging from l1 to r1 and 
+    *        from l2 to r2 separately.
+    */
+    int findKthNum(vector<int>& nums1, int l1, int r1, 
+                   vector<int>& nums2, int l2, int r2,
+                   int k)
     {
         int len1 = r1 - l1;
         int len2 = r2 - l2;
         if (len1 > len2)
         {
-            return findKthLargestNum(nums2, l2, r2, nums1, l1, r1, k);
+            return findKthNum(nums2, l2, r2, nums1, l1, r1, k);
         }
         if (len1 == 0)
         {
@@ -45,11 +49,11 @@ private:
         int m2 = l2 + min(len2, k / 2) - 1;
         if (nums1[m1] > nums2[m2])
         {
-            return findKthLargestNum(nums1, l1, r1, nums2, m2 + 1, r2, k - (m2 - l2 + 1));
+            return findKthNum(nums1, l1, r1, nums2, m2 + 1, r2, k - (m2 - l2 + 1));
         }
         else 
         {
-            return findKthLargestNum(nums1, m1 + 1, r1, nums2, l2, r2, k - (m1 - l1 + 1));
+            return findKthNum(nums1, m1 + 1, r1, nums2, l2, r2, k - (m1 - l1 + 1));
         }
     }
 };

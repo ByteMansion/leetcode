@@ -1,8 +1,5 @@
 /**
- * @file leetcode21.cpp
- * @brief Merge 2 sorted lists
- * @version 0.1
- * @date 2022-05-05
+ * @brief Leetcode 21 Merge 2 sorted lists
  */
 #include "utils.hpp"
 
@@ -31,12 +28,7 @@ public:
             }
             node = node->next;
         }
-        if (list1) {
-            node->next = list1;
-        }
-        if (list2) {
-            node->next = list2;
-        }
+        node->next = list1 ? list1 : list2;
         node = dummy->next;
         delete dummy;
         return node;
