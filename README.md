@@ -99,6 +99,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |167|[Leetcode 167 Two Sum II](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)|[solution](array/leetcode167.cpp)|two pointers|
 |206|[Leetcode 206 Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[solution](./linkedlist/leetcode206.cpp)||
 |209|[Leetcode 209 Minimum Size Subarray Sum](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)|[solution](./array/leetcode209.cpp)|sliding window|
+|214|[Leetcode 214 Shortest Palindrome](https://leetcode.cn/problems/shortest-palindrome/)|[solution](./string/leetcode214.cpp)|KMP, Manacher|
 |215|[Leetcode 215 Kth Largest Element in An Array](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)|[solution](./array/sort/leetcode215.cpp)|heap sort/quick sort|
 |235|[Leetcode 235 Lowest Common Ancestor of a Binary Search Tree](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)|[solution](./tree/leetcode235.cpp)|recursive method|
 |315|[Leetcode 315 Count of Smaller Numbers After Self](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)|[solution](./array/leetcode315.cpp)|merge sort|

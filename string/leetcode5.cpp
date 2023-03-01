@@ -78,12 +78,12 @@ public:
                     if(j - i < 3) {
                         dp[i][j] = true;
                     } else {
-                        dp[i][j] = dp[i+1][j-1];
+                        dp[i][j] = dp[i + 1][j - 1];
                     }
                 }
 
-                if(dp[i][j] && j-i+1 > maxLen) {
-                    maxLen = j-i+1;
+                if(dp[i][j] && j - i + 1 > maxLen) {
+                    maxLen = j - i + 1;
                     start = i;
                 }
             }
@@ -114,7 +114,7 @@ public:
         int dp[len*(len+1) >> 1];
         // init special value
         for(int i = 0; i < len; i++) {
-            dp[i*(1+i)/2+i] = true;
+            dp[i * ( 1 + i) / 2 + i] = true;
         }
 
         int maxLen = 1;
@@ -122,17 +122,17 @@ public:
         for(int j = 1; j < len; j++) {
             for(int i = 0; i < j; i++) {
                 if(s[i] != s[j]) {
-                    dp[i*(1+i)/2+j] = false;
+                    dp[i * (1 + i) / 2 + j] = false;
                 } else {
                     if(j - i < 3) {
-                        dp[i*(i+1)/2+j] = true;
+                        dp[i * (i + 1) / 2 + j] = true;
                     } else {
-                        dp[i*(1+i)/2+j] = dp[(i+1)*(i+2)/2+j-1];
+                        dp[i * (1 + i) / 2 + j] = dp[(i + 1) * ( i + 2) / 2 + j - 1];
                     }
                 }
 
-                if(dp[i*(i+1)/2+j] && j-i+1 > maxLen) {
-                    maxLen = j-i+1;
+                if(dp[i * (i + 1) / 2 + j] && j - i + 1 > maxLen) {
+                    maxLen = j - i + 1;
                     start = i;
                 }
             }
