@@ -77,6 +77,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |64|[Leetcode 64 Minimum Path Sum](https://leetcode-cn.com/problems/minimum-path-sum/)|[solution](./array/leetcode64.cpp)|dynamic programming|
 |65|[Leetcode 65 Valid Number](https://leetcode-cn.com/problems/valid-number/)|[solution](./string/leetcode65.cpp)|DFA, Deterministic Finite Automation|
 |70|[Leetcode 70 Climbing Stirs](https://leetcode.com/problems/climbing-stairs/)|[solution](./number/leetcode70.cpp)|dynamic programming|
+|75|[Leetcode 75 Sort Colors](https://leetcode.cn/problems/sort-colors/)|[solution](./array/sort/leetcode75.cpp)||
 |76|[Leetcode 76 Minimum Window Substring](https://leetcode-cn.com/problems/minimum-window-substring/)|[solution](./string/leetcode76.cpp)||
 |79|[Leetcode 79 Word Search](https://leetcode-cn.com/problems/word-search/)|[solution](./array/leetcode79.cpp)||
 |81|[Leetcode 81 Search in Rotated Sorted Array II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)|[solution](array/leetcode81.cpp)|binary search|
