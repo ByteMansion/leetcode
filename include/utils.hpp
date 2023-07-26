@@ -18,6 +18,7 @@ struct ListNode {
     ListNode *next;
 
     ListNode(int x) : val(x), next(NULL) {}
+    ListNode(int x, ListNode *node) : val(x), next(node) {}
  };
 
 struct TreeNode {
