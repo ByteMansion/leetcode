@@ -91,7 +91,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |121|[Leetcode 121 Best Time to Buy and Sell Stock](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|[solution](./array/leetcode121.cpp)||
 |122|[Leetcode 122 Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[solution](./array/leetcode122.cpp)|greedy method|
 |135|[Leetcode 135 Candy](https://leetcode-cn.com/problems/candy/)|[solution](./array/leetcode135.cpp)|greedy method|
-|141|[Leetcode 141 Sort List](https://leetcode.cn/problems/sort-list/)|[solution](./linkedlist/leetcode141.cpp)||
+|141|[Leetcode 141 Linked List Cycle](https://leetcode.cn/problems/linked-list-cycle/)|[solution](./linkedlist/leetcode141.cpp)||
 |142|[Leetcode 142 Linked List Cycle II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)|[solution](linkedlist/leetcode142.cpp)|two pointers|
 |144|[Leetcode 144 Binary Tree Preorder Traversal](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)|[solution](./tree/leetcode144.cpp)|**preorder traversal**|
 |145|[Leetcode 145 Binary Tree Postorder Traversal](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)|[solution](./tree/leetcode145.cpp)|**postorder traversal**|

@@ -1,6 +1,6 @@
 /**
  * @file leetcode141.cpp
- * @brief Leetcode 141 Sort List
+ * @brief Leetcode 141 Linked List Cycle
  * @version 0.1
  * @date 2023-07-26
  * 
@@ -8,62 +8,27 @@
  * 
  */
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
 #include "utils.hpp"
-
 class Solution {
 public:
-    ListNode* sortList(ListNode* head) {
-        // merge sort
-        if ((head == nullptr) || (head->next == nullptr)) {
-            return head;
+    bool hasCycle(ListNode *head) {
+        if (head == NULL || head->next == NULL) {
+            return false;
         }
-        ListNode *mid = findPivot(head);
-        ListNode *head2 = mid->next;
-        mid->next = nullptr;
-        ListNode *pre = sortList(head);
-        ListNode *pos = sortList(head2);
-        return merge(pre, pos);
-    }
-private:
-    ListNode *merge(ListNode *pre, ListNode *pos) {
-        ListNode *head = new ListNode(-1, nullptr);
-        ListNode *node = head;
-        while (pre || pos) {
-            if ((pre == nullptr) || (pos != nullptr && pre->val > pos->val)) {
-                node->next = pos;
-                pos = pos->next;
-            } else if ((pos == nullptr) || (pre != nullptr && pre->val <= pos->val)) {
-                node->next = pre;
-                pre = pre->next;
-            }
-            node = node->next;
-        }
-        node = head->next;
-        delete head;
-        return node;
-    }
-    ListNode *findPivot(ListNode *head) {
-        ListNode *fast = head->next;
-        ListNode *slow = head;
-        while (fast) {
-            if (fast->next) {
-                fast = fast->next->next;
-                slow = slow->next;
+        ListNode *prev = head;
+        ListNode *post = head->next;
+        while (prev && post) {
+            prev = prev->next;
+            if (post->next) {
+                post = post->next->next;
             } else {
-                fast = nullptr;
+                post = NULL;
+            }
+            if (post == prev) {
+                return true;
             }
         }
-        return slow;
+        return false;
     }
 };
 
@@ -77,10 +42,9 @@ int main()
     head->next = node1;
     node1->next = node2;
     node2->next = node3;
-    node3->next = node1;
+    node3->next = node2;
 
-    ListNode* node = obj.sortList(head);
-    print_linkedlist(node);
+    std::cout << obj.hasCycle(head) << std::endl;
     
     return 0;
 }
