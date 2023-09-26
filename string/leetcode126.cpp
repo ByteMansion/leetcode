@@ -11,7 +11,7 @@ class Solution {
 public:
     /**
      * Solution 1: Recursive method
-     * @note Exceed time limit
+     * @result Exceed time limit
      */
     vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {
         vector<vector<string>> results = vector<vector<string>>(0, vector<string>());

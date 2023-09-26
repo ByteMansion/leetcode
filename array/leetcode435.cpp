@@ -12,6 +12,10 @@ using namespace std;
 
 class Solution {
 public:
+    /**
+     * Solution: Sorting and then traverse all elements
+     * @note if not use reference in lamda expression in sorting, this solution would exceed time limit. 
+     */
     int eraseOverlapIntervals(vector<vector<int>>& intervals) {
         int result = 0;
         sort(intervals.begin(), intervals.end(),
@@ -31,6 +35,7 @@ public:
         }
         return result;
     }
+
 };
 
 int main()
