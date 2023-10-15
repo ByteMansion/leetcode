@@ -100,7 +100,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |147|[Leetcode 147 Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/)|[solution](linkedlist/leetcode147.cpp)|insertion sort of linked list|
 |148|[Leetcode 148 Sort List](https://leetcode-cn.com/problems/sort-list/)|[solution](./linkedlist/leetcode148.cpp)|merge sort of linked list|
 |153|[Leetcode 153 Find Minimum in Rotated Sorted Array](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)|[solution](array/leetcode153.cpp)|binary search|
-|154|[Leetcode 154 Find Minimum in Rotated Sorted Array](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[solution](./array/leetcode154.cpp)|binary search|
+|154|[Leetcode 154 Find Minimum in Rotated Sorted Array II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[solution](./array/leetcode154.cpp)|binary search|
 |167|[Leetcode 167 Two Sum II](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)|[solution](array/leetcode167.cpp)|two pointers|
 |206|[Leetcode 206 Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[solution](./linkedlist/leetcode206.cpp)||
 |209|[Leetcode 209 Minimum Size Subarray Sum](https://leetcode-cn.com/problems/minimum-size-subarray-sum/)|[solution](./array/leetcode209.cpp)|sliding window|
@@ -134,6 +134,7 @@ $ g++ -std=c++17 array/leetcode53.cpp -o leetcode53
 |763|[Leetcode 763 Pertition Labels](https://leetcode-cn.com/problems/partition-labels/)|[solution](./string/leetcode763.cpp)|greedy algorithm|
 |792|[Leetcode 792 Number of Matching Subsequences](https://leetcode.com/problems/number-of-matching-subsequences/)|[solution](./string/leetcode792.cpp)||
 |875|[Leetcode 875 Koko Eating Bananas](https://leetcode-cn.com/problems/koko-eating-bananas/)|[solution](./array/leetcode875.cpp)|binary search|
+|912|[Leetcode 912 Sort An Array](https://leetcode.cn/problems/sort-an-array/)|[solution](./array/sort/leetcode912.cpp)|sort|
 |992|[Leetcode 992 Subarrays with K Different Integers](https://leetcode-cn.com/problems/subarrays-with-k-different-integers/)|[solution](./array/leetcode992.cpp)|sliding window|
 |996|[Leetcode 996 Number of Squareful Arrays](https://leetcode.com/problems/number-of-squareful-arrays/)|[solution](./array/permutation/leetcode996.cpp)||
 

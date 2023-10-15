@@ -33,6 +33,7 @@ public:
     /**
      * 2nd solution: quicksort algorithm
      *
+     * @result Exceed time limit
      * - time complexity: O(nlogn) on average
      * - space complexity: O(1)
      *
@@ -55,8 +56,8 @@ private:
         }
 
         return (pivot > pos) ?
-               quickSelect(nums, l, pivot-1, pos) :
-               quickSelect(nums, pivot+1, r, pos);
+               quickSelect(nums, l, pivot - 1, pos) :
+               quickSelect(nums, pivot + 1, r, pos);
     }
 
     inline int randomPartition(vector<int>& nums, int l, int r)
@@ -74,9 +75,9 @@ private:
                 swap(nums[++i], nums[idx]);
             }
         }
-        swap(nums[i+1], nums[r]);
+        swap(nums[i + 1], nums[r]);
 
-        return i+1;
+        return i + 1;
     }
 
 public:
@@ -96,7 +97,7 @@ public:
         buildMaxHeap(nums, heapsize);
 
         // loop (k-1) times
-        for(int i = nums.size()-1; i >= nums.size()-k+1; --i) {
+        for(int i = nums.size() - 1; i >= nums.size() - k + 1; --i) {
             swap(nums[0], nums[i]);
             heapsize--;
             maxHeapify(nums, 0, heapsize);
